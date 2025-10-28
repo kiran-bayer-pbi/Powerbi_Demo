@@ -1,0 +1,104 @@
+table 'Dim Brand'
+	lineageTag: e0a76d5c-7713-4059-a72f-62cc7023542e
+
+	column 'Reporting Unit'
+		dataType: string
+		lineageTag: b38b6852-dd55-47b7-9717-fda6eddc58a9
+		summarizeBy: none
+		sourceColumn: Reporting Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 1'
+		dataType: string
+		lineageTag: 8091053b-5d7f-45a2-a066-ab4f80ff84da
+		summarizeBy: none
+		sourceColumn: BSV Lvl 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (NPD)'
+		dataType: string
+		lineageTag: 45a5a718-a545-41a3-9363-c7bc5ef8d0a3
+		summarizeBy: none
+		sourceColumn: Brand Name (NPD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (LPPM)'
+		dataType: string
+		lineageTag: 78a94446-3da8-4eec-b2da-17f27e19562a
+		summarizeBy: none
+		sourceColumn: Brand Name (LPPM)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dossier Type'
+		dataType: string
+		lineageTag: b1dcb278-70b7-476d-97c9-8cc8ea384a20
+		summarizeBy: none
+		sourceColumn: Dossier Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Production Site'
+		dataType: string
+		lineageTag: 73ac0c6e-a323-405b-a4dd-64802951444c
+		summarizeBy: none
+		sourceColumn: Production Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Formulation
+		dataType: string
+		lineageTag: bb0db4df-5f86-4d12-9386-847f5c1fbd91
+		summarizeBy: none
+		sourceColumn: Formulation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formulation Name'
+		dataType: string
+		lineageTag: 9a6c4607-a4c0-4962-bc21-36366b4b9481
+		summarizeBy: none
+		sourceColumn: Formulation Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Galenical Form'
+		dataType: string
+		lineageTag: c3ef380e-b539-4b60-8138-a7aeb2de6e19
+		summarizeBy: none
+		sourceColumn: Galenical Form
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pack Size'
+		dataType: string
+		lineageTag: 862a1970-771e-4130-bc1c-3b007c87aea3
+		summarizeBy: none
+		sourceColumn: Pack Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Straco Flag'
+		dataType: string
+		lineageTag: 7905b587-278d-4177-b2f6-c3239a263739
+		summarizeBy: none
+		sourceColumn: Straco Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Brand' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Reporting Unit", "BSV Lvl 1", "Brand Name (NPD)", "Brand Name (LPPM)", "Dossier Type", "Production Site", "Formulation", "Formulation Name", "Galenical Form", "Pack Size", "Straco Flag"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

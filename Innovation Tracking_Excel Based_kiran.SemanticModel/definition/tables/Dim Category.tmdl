@@ -1,0 +1,35 @@
+table 'Dim Category'
+	lineageTag: 856ebf4c-56d4-4fb8-a2fb-db42179afe07
+
+	column 'Reporting Unit'
+		dataType: string
+		lineageTag: bb0c338f-f902-4374-80ad-7ddb65417545
+		summarizeBy: none
+		sourceColumn: Reporting Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Category' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Measure", "BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5"}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Removed Columns",{"Cannibalization", "Income Statement (P&L).", "BSV Lvl 6", "Reporting Unit", "Brand Name (NPD)", "Brand Name (LPPM)", "NPD Lvl.1", "NPD Lvl.2", "NPD Name", "NPD Status", "NPD Process Step", "NPD Developement Typ", "NPD R&D Proj.Class", "LPPM", "LPPM Name", "LPPM Innovation Type", "LPPM Lifespan", "Innovation Impact", "Straco Flag", "NPD first Launch month/year", "Launch year", "Launch month/year", "LPPM Status", "Enterprise Classification (LPPM)"}),
+				    #"Sorted Rows" = Table.Sort(#"Removed Other Columns",{{"LPPM", Order.Ascending}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Sorted Rows", {"LPPM"}),
+				    Custom1 = Table.AddColumn(#"Removed Duplicates", "LPPM State", each if [LPPM Status] = "Launched" then "Post-Launch" else if [LPPM Status] = "Draft" then "Pre-CDH-Commitment" else if [LPPM Status] = "GSC Site Allocation" then "Pre-CDH-Commitment" else if [LPPM Status] = "Cogs Entry" then "Pre-CDH-Commitment" else if [LPPM Status] = "Local Finance" then "Pre-CDH-Commitment" else if [LPPM Status] = "CDH/CCH" then "Pre-CDH-Commitment" else "CDH-committed"),
+				    #"Changed Type" = Table.TransformColumnTypes(Custom1,{{"LPPM State", type text}}),
+				    Custom2 = Table.AddColumn(#"Changed Type", "Pipeline Status", each if [NPD Process Step] = "Large scale development and/or Clinical Completed" then "Post-DC Pipeline" else if [NPD Process Step] = "Not assigned" then "Check" else if [NPD Process Step] = "Legal Medical Readiness / Regulatory Submission" then "Post-DC Pipeline" else if [NPD Process Step] = "End" then "Post Launched" else if [NPD Process Step] = "Small scale development Completed" then "Post-DC Pipeline" else if [NPD Process Step] = "1st Launch" then "Post Launched" else if [NPD Process Step] = "2nd Launch" then "Post Launched" else if [NPD Process Step] = "Development Contract" then "Post-DC Pipeline" else if [NPD Process Step] = "Draft" then "Draft" else if [NPD Process Step] = "Launch Contract" then "Post-DC Pipeline" else if [NPD Process Step] = "Global Sourcing Council" then "Post-DC Pipeline" else if [NPD Process Step] = "Feasibility Contract" then "Pre-DC Pipeline" else if [NPD Process Step] = "Scoping" then "Pre-DC Pipeline" else "Check"),
+				    #"Changed Type1" = Table.TransformColumnTypes(Custom2,{{"Pipeline Status", type text}}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Changed Type1",{"Reporting Unit"}),
+				    #"Removed Duplicates1" = Table.Distinct(#"Removed Other Columns1")
+				in
+				    #"Removed Duplicates1"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,235 @@
+table 'FACT LPPM'
+	lineageTag: 42d9d42e-207a-4406-87f7-0dba5a3de6e4
+
+	measure 'NPD Count' = CALCULATE(DISTINCTCOUNT('FACT LPPM'[LPPM]),'FACT LPPM'[NPD Lvl.1] = "NPDs")
+		formatString: #,0
+		lineageTag: 7e0657e2-4f64-4e58-9bfb-494deb2c193a
+
+	column 'Brand Name (LPPM)'
+		dataType: string
+		lineageTag: 1c8bf9b0-0b7b-4274-99a8-0dc6fa3c8e04
+		summarizeBy: none
+		sourceColumn: Brand Name (LPPM)
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM
+		dataType: string
+		lineageTag: 74429b1a-b89f-47e6-8a82-0217368d0a79
+		summarizeBy: none
+		sourceColumn: LPPM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Name'
+		dataType: string
+		lineageTag: 61932c11-afae-4b87-86c5-f09fb007f9b2
+		summarizeBy: none
+		sourceColumn: LPPM Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Innovation Type'
+		dataType: string
+		lineageTag: fd0b9fe1-fbde-4777-811b-3f9d458c2cda
+		summarizeBy: none
+		sourceColumn: LPPM Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Lifespan'
+		dataType: string
+		lineageTag: a785bf75-40f5-44d8-a1c1-0ba1a12372f3
+		summarizeBy: none
+		sourceColumn: LPPM Lifespan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Innovation Impact'
+		dataType: string
+		lineageTag: 7220c3bf-30e0-4175-b36d-99d2490801b2
+		summarizeBy: none
+		sourceColumn: Innovation Impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Straco Flag'
+		dataType: string
+		lineageTag: e7abcdb3-f023-4536-8927-b212bb6ba246
+		summarizeBy: none
+		sourceColumn: Straco Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch year'
+		dataType: string
+		lineageTag: 26f68e09-bdf8-4b81-b553-eb5773cced34
+		summarizeBy: none
+		sourceColumn: Launch year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch month/year'
+		dataType: string
+		lineageTag: 4e1518fe-b151-4964-83a9-3931dc755818
+		summarizeBy: none
+		sourceColumn: Launch month/year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Status'
+		dataType: string
+		lineageTag: 9f8b19c6-4df5-4752-b1d2-d8ac9f81e4f2
+		summarizeBy: none
+		sourceColumn: LPPM Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Enterprise Classification (LPPM)'
+		dataType: string
+		lineageTag: 18c9b222-bdb2-4089-ba45-05950f5c863a
+		summarizeBy: none
+		sourceColumn: Enterprise Classification (LPPM)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cannibalization
+		dataType: string
+		lineageTag: b69a0d61-29f0-4969-9cff-1d44b0fe0bc1
+		summarizeBy: none
+		sourceColumn: Cannibalization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Income Statement (P&L).'
+		dataType: string
+		lineageTag: 934aae42-5c93-4de3-b6cc-20a86e0f9406
+		summarizeBy: none
+		sourceColumn: Income Statement (P&L).
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (NPD)'
+		dataType: string
+		lineageTag: 2eade027-b544-4593-a1ac-a6c3f620d154
+		summarizeBy: none
+		sourceColumn: Brand Name (NPD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.1'
+		dataType: string
+		lineageTag: 900f42e6-8e1c-4f1c-8da4-1bf457f58b88
+		summarizeBy: none
+		sourceColumn: NPD Lvl.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.2'
+		dataType: string
+		lineageTag: cf76d8bc-efe7-4304-a13e-5064cf633adf
+		summarizeBy: none
+		sourceColumn: NPD Lvl.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: 9ee3c536-ddf9-4bfe-a298-03f1272b8b7d
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Status'
+		dataType: string
+		lineageTag: 35556752-f147-4af2-8348-67d950ab445a
+		summarizeBy: none
+		sourceColumn: NPD Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Process Step'
+		dataType: string
+		lineageTag: 7efa8870-eaa3-4295-a91f-fe6ac1ad69dd
+		summarizeBy: none
+		sourceColumn: NPD Process Step
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Developement Typ'
+		dataType: string
+		lineageTag: 5d3e4dfc-ef64-4536-93eb-36eac2e1ffeb
+		summarizeBy: none
+		sourceColumn: NPD Developement Typ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD R&D Proj.Class'
+		dataType: string
+		lineageTag: 444bdddd-e7c7-449c-9779-5d91e3c5a2d5
+		summarizeBy: none
+		sourceColumn: NPD R&D Proj.Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD first Launch month/year'
+		dataType: string
+		lineageTag: db7f0e34-a66e-4c48-a2af-38fbc1843a47
+		summarizeBy: none
+		sourceColumn: NPD first Launch month/year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM State'
+		dataType: string
+		lineageTag: cb1b7543-9154-4261-a1af-e1360bab711f
+		summarizeBy: none
+		sourceColumn: LPPM State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pipeline Status'
+		dataType: string
+		lineageTag: 8f7c96e1-3146-4eab-ae6e-c8e542a5fee5
+		summarizeBy: none
+		sourceColumn: Pipeline Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 6'
+		dataType: string
+		lineageTag: 845c2bfd-0cf3-4168-a69f-5e39417cf269
+		summarizeBy: none
+		sourceColumn: BSV Lvl 6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Unit'
+		dataType: string
+		lineageTag: 5143120f-3790-4dab-8fb6-30f06fd7a1cd
+		summarizeBy: none
+		sourceColumn: Reporting Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FACT LPPM' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Measure", "BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5"}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Removed Columns",{"Cannibalization", "Income Statement (P&L).", "BSV Lvl 6", "Reporting Unit", "Brand Name (NPD)", "Brand Name (LPPM)", "NPD Lvl.1", "NPD Lvl.2", "NPD Name", "NPD Status", "NPD Process Step", "NPD Developement Typ", "NPD R&D Proj.Class", "LPPM", "LPPM Name", "LPPM Innovation Type", "LPPM Lifespan", "Innovation Impact", "Straco Flag", "NPD first Launch month/year", "Launch year", "Launch month/year", "LPPM Status", "Enterprise Classification (LPPM)"}),
+				    #"Sorted Rows" = Table.Sort(#"Removed Other Columns",{{"LPPM", Order.Ascending}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Sorted Rows", {"LPPM"}),
+				    Custom1 = Table.AddColumn(#"Removed Duplicates", "LPPM State", each if [LPPM Status] = "Launched" then "Post-Launch" else if [LPPM Status] = "Draft" then "Pre-CDH-Commitment" else if [LPPM Status] = "GSC Site Allocation" then "Pre-CDH-Commitment" else if [LPPM Status] = "Cogs Entry" then "Pre-CDH-Commitment" else if [LPPM Status] = "Local Finance" then "Pre-CDH-Commitment" else if [LPPM Status] = "CDH/CCH" then "Pre-CDH-Commitment" else "CDH-committed"),
+				    #"Changed Type" = Table.TransformColumnTypes(Custom1,{{"LPPM State", type text}}),
+				    Custom2 = Table.AddColumn(#"Changed Type", "Pipeline Status", each if [NPD Process Step] = "Large scale development and/or Clinical Completed" then "Post-DC Pipeline" else if [NPD Process Step] = "Not assigned" then "Check" else if [NPD Process Step] = "Legal Medical Readiness / Regulatory Submission" then "Post-DC Pipeline" else if [NPD Process Step] = "End" then "Post Launched" else if [NPD Process Step] = "Small scale development Completed" then "Post-DC Pipeline" else if [NPD Process Step] = "1st Launch" then "Post Launched" else if [NPD Process Step] = "2nd Launch" then "Post Launched" else if [NPD Process Step] = "Development Contract" then "Post-DC Pipeline" else if [NPD Process Step] = "Draft" then "Draft" else if [NPD Process Step] = "Launch Contract" then "Post-DC Pipeline" else if [NPD Process Step] = "Global Sourcing Council" then "Post-DC Pipeline" else if [NPD Process Step] = "Feasibility Contract" then "Pre-DC Pipeline" else if [NPD Process Step] = "Scoping" then "Pre-DC Pipeline" else "Check"),
+				    #"Changed Type1" = Table.TransformColumnTypes(Custom2,{{"Pipeline Status", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

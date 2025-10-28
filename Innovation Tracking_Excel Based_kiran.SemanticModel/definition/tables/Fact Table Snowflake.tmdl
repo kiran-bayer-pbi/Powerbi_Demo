@@ -1,0 +1,178 @@
+table 'Fact Table Snowflake'
+	lineageTag: 60868473-f3f2-4cf2-bfc6-4f8ca114ffc4
+
+	column DATE
+		dataType: dateTime
+		formatString: MMM-YY
+		lineageTag: 424f473f-1d22-469b-bb14-69c86df7782f
+		summarizeBy: none
+		sourceColumn: DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column COUNTRY_MOD
+		dataType: string
+		lineageTag: c7c88e89-5576-421a-b34e-286de1e7ee35
+		summarizeBy: none
+		sourceColumn: COUNTRY_MOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAUNCH_DATE
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 66b9ef89-2f45-4d98-805b-4bf4e2079d8d
+		summarizeBy: none
+		sourceColumn: LAUNCH_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column BRAND
+		dataType: string
+		lineageTag: bfa95196-2be4-494a-886f-6ad8328ec23e
+		summarizeBy: none
+		sourceColumn: BRAND
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: c7ad25c1-fb37-4d97-8d02-0af7f3d3cd38
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Number'
+		dataType: string
+		lineageTag: 5cdb3f0d-a0c4-4595-a05a-43c806040abc
+		summarizeBy: none
+		sourceColumn: NPD Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM_NAME
+		dataType: string
+		lineageTag: 5330e0d6-8fb9-4c5c-bef0-1f51e8ad84fa
+		summarizeBy: none
+		sourceColumn: LPPM_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Innovation Type'
+		dataType: string
+		lineageTag: 26a7e342-9a68-4eca-b215-4b2086231c4b
+		summarizeBy: none
+		sourceColumn: LPPM Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM_VALUE
+		dataType: double
+		lineageTag: b4b00d44-f048-4b31-9105-42ec902a91af
+		summarizeBy: sum
+		sourceColumn: LPPM_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ACTUALS
+		dataType: double
+		lineageTag: 54c4ee50-f106-48ae-a735-bc1b0394bb8d
+		summarizeBy: sum
+		sourceColumn: ACTUALS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CATEGORY
+		dataType: string
+		lineageTag: 180a2065-0d24-431e-921c-31335fab9011
+		summarizeBy: none
+		sourceColumn: CATEGORY
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPD_BRAND
+		dataType: string
+		lineageTag: 3f42b8b7-2db5-490c-860e-b297ac1a74c6
+		summarizeBy: none
+		sourceColumn: NPD_BRAND
+
+		annotation SummarizationSetBy = Automatic
+
+	column INNOVA_LINK
+		dataType: string
+		lineageTag: 341bbfad-2978-48f0-acad-0fb35807694b
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: INNOVA_LINK
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM_NUMBER
+		dataType: string
+		lineageTag: 3be71908-a27f-49e2-9f72-3945dafc0705
+		summarizeBy: none
+		sourceColumn: LPPM_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column BUDGET_VALUE
+		dataType: double
+		lineageTag: ba28ac9f-7258-47be-bc78-f4f985dc2f18
+		summarizeBy: sum
+		sourceColumn: BUDGET_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column REGION
+		dataType: string
+		lineageTag: 2f14383e-00f9-4ee9-81cf-08a484c9f73b
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLUSTER
+		dataType: string
+		lineageTag: 97be10cb-773b-427b-a1b3-29ba5f01e522
+		summarizeBy: none
+		sourceColumn: CLUSTER
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		lineageTag: aa8e5562-c813-4e62-83c7-280340f59c18
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact Table Snowflake' = m
+		mode: import
+		source =
+				let
+				    Source = Value.NativeQuery(Snowflake.Databases("BAY-CHDAAPRD.snowflakecomputing.com","ZDATACORE_DP_BRO_REPORTING",[Implementation="2.0", Role="CH.DAA.BROZONE.DATAENGINEER.DEV"]){[Name="ZDATACORE_DP_BRO"]}[Data], "---ACTUALS AND LPPM VALUES--29.09.2025#(lf)#(lf)SELECT DATE,COUNTRY_MOD,REGION,CLUSTER,COUNTRY, LAUNCH_DATE,BRAND,""NPD Name"",""NPD Number"",LPPM_NAME,LPPM_NUMBER,""LPPM Innovation Type"",SUM(""LPPM Value BUD"") LPPM_Value,#(lf)       round(SUM(""Actual Value BUD"" ),2) AS Actuals,category, sum(""Budget Value BUD"") Budget_Value,#(lf)       case when ""Innovation Type"" = 'Rollouts' then concat(""NPD Name"",'(#)')#(lf)            when ""Innovation Type"" <> 'Rollouts' then concat(""NPD Name"",' (',brand,')') end as NPD_Brand,#(lf)      case  when ""Innovation Type"" = 'Rollouts' then concat('https://synaps-apps.intranet.cnb/NPDManagement/npds/','Roll-outs(#)','#/detailsContent')#(lf)            when ""Innovation Type"" <> 'Rollouts' then concat('https://synaps-apps.intranet.cnb/NPDManagement/npds/',""NPD Number"",'#/detailsContent') end as Innova_Link#(lf)FROM ZDATACORE_DP_BRO.LX.V_LX_LEGACY_PREVIEW#(lf)--where DATE >= '2025-05-01' and DATE <= '2025-05-31'#(lf)GROUP BY DATE,COUNTRY_MOD,category,REGION,CLUSTER,COUNTRY, LAUNCH_DATE,BRAND,""NPD Name"",""NPD Number"",LPPM_NAME,LPPM_NUMBER,""LPPM Innovation Type"",""Innovation Type""", null, [EnableFolding=true])
+				in
+				    Source
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

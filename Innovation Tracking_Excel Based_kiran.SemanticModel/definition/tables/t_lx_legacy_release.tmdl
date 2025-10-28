@@ -1,0 +1,2340 @@
+table t_lx_legacy_release
+	lineageTag: 4f6e30f5-0e9e-40c2-a242-4a3dd88f5236
+
+	column RLS_AUTH_SID
+		dataType: string
+		lineageTag: 747c8978-c9ba-4583-834f-72cfc3102e48
+		summarizeBy: none
+		sourceColumn: RLS_AUTH_SID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 0840d002-978c-49de-9f31-af9bd59581ac
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: ce370f6a-4ff7-4179-baff-9811dfee240b
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month/Year
+		dataType: string
+		lineageTag: 19f8a1a8-066a-4dfb-a412-33393a3efc92
+		summarizeBy: none
+		sourceColumn: Month/Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cf39247e-82de-4e40-a8f8-e5b48274a577
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Reporting period'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 61aa692b-1745-479b-83f1-56a4bc265d81
+		summarizeBy: none
+		sourceColumn: Reporting period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Region
+		dataType: string
+		lineageTag: b1ae3fc9-997a-49e9-baff-676309debe91
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cluster
+		dataType: string
+		lineageTag: 681524d5-86cc-4c63-8617-4715bef12816
+		summarizeBy: none
+		sourceColumn: Cluster
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 1a7348e2-c0ce-4387-b62d-4238ecdde005
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_MOD
+		dataType: string
+		lineageTag: 39d0a332-9da9-4d0b-9fd3-5259404db0d7
+		summarizeBy: none
+		sourceColumn: Country_MOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column Launch_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: eb08ff83-dcfe-4bd5-935a-6e43023536ac
+		summarizeBy: none
+		sourceColumn: Launch_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Brand
+		dataType: string
+		lineageTag: cb57aa45-d0c7-4863-8806-99ce3ef94d84
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Classification'
+		dataType: string
+		lineageTag: bcf722f9-b373-4583-aac5-cec0b63ff6ad
+		summarizeBy: none
+		sourceColumn: Brand Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 55032121-18d4-4180-a4bb-63d295a134f9
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: 7e50f0c2-6627-4c25-8e6d-944a9c5677a1
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Number'
+		dataType: string
+		lineageTag: 38c7d511-cc55-4563-b07d-f52329e662a5
+		summarizeBy: none
+		sourceColumn: NPD Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Innovation Type'
+		dataType: string
+		lineageTag: b18ad2c0-c673-4e95-a2e5-11992c9d39d2
+		summarizeBy: none
+		sourceColumn: Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Innovation Impact'
+		dataType: string
+		lineageTag: 2c260292-e9e1-48d8-a3cc-8f1f7371d34c
+		summarizeBy: none
+		sourceColumn: Innovation Impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Innovation Type'
+		dataType: string
+		lineageTag: 45cd579d-8dfc-4728-9a1c-1ff0a90685c8
+		summarizeBy: none
+		sourceColumn: LPPM Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Global Brand Logo Available'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6293db49-aec3-42c3-ae8c-45dec09d5627
+		summarizeBy: sum
+		sourceColumn: Global Brand Logo Available
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Initiative Success Target'
+		dataType: double
+		lineageTag: 2169b1a3-6956-4ac2-ba8b-3c23eb804f5e
+		summarizeBy: sum
+		sourceColumn: Initiative Success Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Transformational Plan Target'
+		dataType: double
+		lineageTag: c2b40ba0-c4f5-444b-8a3b-04050db7111c
+		summarizeBy: sum
+		sourceColumn: Transformational Plan Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Target'
+		dataType: double
+		lineageTag: d22580ab-b2bb-4d71-9cd1-c9d0bc048673
+		summarizeBy: sum
+		sourceColumn: GM Plan Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Regional Plan Target'
+		dataType: double
+		lineageTag: 67a11d92-7294-460d-95a7-07633db2f56d
+		summarizeBy: sum
+		sourceColumn: Regional Plan Target
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LPPM_NUMBER
+		dataType: string
+		lineageTag: 5f8f7642-4a09-4f18-98ea-027ee9c8f395
+		summarizeBy: none
+		sourceColumn: LPPM_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM_NAME
+		dataType: string
+		lineageTag: b127c9f2-fa82-4995-9a28-e55db7e97a5d
+		summarizeBy: none
+		sourceColumn: LPPM_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column NS_ACT_GC
+		dataType: double
+		lineageTag: 5f84e740-64ed-46ee-a7ed-d7ab63a994ce
+		summarizeBy: sum
+		sourceColumn: NS_ACT_GC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M'
+		dataType: double
+		lineageTag: 607e204b-6be5-4fc8-a44b-8c89a6cce263
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M BUD'
+		dataType: double
+		lineageTag: 0953135a-00a7-47e2-b2f2-9768854c3043
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M Lag1'
+		dataType: double
+		lineageTag: e0bbcda1-5a19-4dee-8397-f5b3bcdcdfd3
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M LAG1 BUD'
+		dataType: double
+		lineageTag: 442381bb-4259-4692-89d3-45e1ee5157af
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: 95bf9b7b-e54e-4a96-9ba3-4c7a6de4c37e
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: aaa821f7-b1b4-48a8-88da-a94e6ea88b92
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: 4bb7442e-8456-4b42-906d-aeb716ce3f97
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 92f307b3-345a-464a-9ec5-7e2027f74d77
+		summarizeBy: sum
+		sourceColumn: Actual Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT'
+		dataType: double
+		lineageTag: 9252b538-ae67-410c-869a-3eb643b7c6b7
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT 3 year'
+		dataType: double
+		lineageTag: 48bc6970-640d-42a0-b7f7-0fadf3a31942
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 6904f965-a0e5-486c-a59a-1e3937df86ec
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT BUD'
+		dataType: double
+		lineageTag: e443624e-2995-4290-9ab5-46949ba552da
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT Lag1'
+		dataType: double
+		lineageTag: 6d9ed5bc-dedf-4dd2-9e8e-f173bad0e521
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: ff9845c0-119d-45e7-a3de-3168e3b4fdca
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: fe2a9441-daac-427e-bd1d-593aa2e1fdc6
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MAT LAG1 BUD'
+		dataType: double
+		lineageTag: c3848f7f-3d63-4725-8cea-940dbb6cec90
+		summarizeBy: sum
+		sourceColumn: Actual Value MAT LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value MTH'
+		dataType: double
+		lineageTag: c7720fa7-9b61-4d12-999f-fea74c8e18f3
+		summarizeBy: sum
+		sourceColumn: Actual Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value BUD'
+		dataType: double
+		lineageTag: e7c56792-d521-412a-a11c-fcfbb1a2c92d
+		summarizeBy: sum
+		sourceColumn: Actual Value BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD'
+		dataType: double
+		lineageTag: b1738639-41b2-4893-bc6a-b7f829cb2494
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD 3 years'
+		dataType: double
+		lineageTag: 5e6c2f41-474c-4c25-8443-bce5d17bec19
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 7ab596bd-255b-4737-8749-f3be83659e5c
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD BUD'
+		dataType: double
+		lineageTag: b365a031-09d3-428c-b149-281edf624c00
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD Lag1'
+		dataType: double
+		lineageTag: 1a3e6a0a-8bfe-4025-8531-a4f2769689db
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: 5bfb6e35-4837-4a9e-ac8f-d7660e5e4b62
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 4bb43d38-8797-469f-9a87-323ce423afc9
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Actual Value YTD LAG1 BUD'
+		dataType: double
+		lineageTag: 4895d19e-3199-42bf-856d-6430cad47cae
+		summarizeBy: sum
+		sourceColumn: Actual Value YTD LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M'
+		dataType: double
+		lineageTag: 12d2acff-48f8-4490-bef8-0013320c8eb0
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M BUD'
+		dataType: double
+		lineageTag: f09e7ded-3f1b-4332-88c2-b072ae347d07
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M Lag1'
+		dataType: double
+		lineageTag: 94ac96a1-77ab-4fd9-be95-8aa3474b9aa5
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M LAG1 BUD'
+		dataType: double
+		lineageTag: 6ac9b3ca-1922-4b19-8c5c-44b0e5dc87f7
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: 3bccca80-7bf0-47dd-a563-7e8c0923b3e6
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 19271886-414c-4abd-89c5-cdbcab37486a
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: d218aa17-aff5-4dc5-9128-35d8d0a26c7c
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: ce9c5f88-3b67-4893-b493-f1119a6198df
+		summarizeBy: sum
+		sourceColumn: Budget Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT'
+		dataType: double
+		lineageTag: 9dea0ff6-8868-442e-8288-89e92f46fdae
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT 3 year'
+		dataType: double
+		lineageTag: 65468a75-bea0-4711-bb5e-1bb5af2dd3e7
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 30e16996-0787-4175-90f6-e6509e596cb1
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT BUD'
+		dataType: double
+		lineageTag: b2fb73b2-1875-4bf9-adfb-1b8211c90725
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT Lag1'
+		dataType: double
+		lineageTag: 82f59694-1508-4b9b-a7f3-b3049e5c297a
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: faccfe78-a2b2-4eb7-84f0-fd5ba6ae18f1
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: b18cfb50-7c91-46fe-a714-6601dafc6c52
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MAT LAG1 BUD'
+		dataType: double
+		lineageTag: 3530e6a5-2d08-4948-b3ba-3a74302884a4
+		summarizeBy: sum
+		sourceColumn: Budget Value MAT LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value MTH'
+		dataType: double
+		lineageTag: 6cf25161-5963-4a57-ae07-3ad1f7214a21
+		summarizeBy: sum
+		sourceColumn: Budget Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value BUD'
+		dataType: double
+		lineageTag: d42fa64a-fdda-4a57-bd29-c894b8a2baa8
+		summarizeBy: sum
+		sourceColumn: Budget Value BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD'
+		dataType: double
+		lineageTag: 593e6551-2185-4d12-994f-f1b17b349b7d
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD 3 years'
+		dataType: double
+		lineageTag: 9748ac8e-c340-46ab-8243-a7e2e060c23f
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: a1b3981b-1c14-47e8-bd51-08b7ff36bb88
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD BUD'
+		dataType: double
+		lineageTag: fb2c6e63-ad3c-42ee-b9e7-9ab49ae02c28
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD Lag1'
+		dataType: double
+		lineageTag: 52f90788-0bb6-4d51-900b-54741a3d6d4f
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: a0eb2853-de6e-4a3a-b79e-c94dda8aa367
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 19de3a87-83e2-45ac-9ebe-6ac3cb764411
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Value YTD LAG1 BUD'
+		dataType: double
+		lineageTag: 1c7be013-fac6-42a6-840a-fdaf31e7f3f3
+		summarizeBy: sum
+		sourceColumn: Budget Value YTD LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M'
+		dataType: double
+		lineageTag: 6288dad4-3ef3-4aa3-85c5-7182fd6eccb3
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M BUD'
+		dataType: double
+		lineageTag: e771766b-a708-483d-9ff4-a40c0c87c246
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M Lag1'
+		dataType: double
+		lineageTag: 2efc8bb2-bd11-4af1-9bcf-c0ce578fa6b9
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M LAG1 BUD'
+		dataType: double
+		lineageTag: 5745c94c-bea0-41c9-9e31-179220256ce8
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: d7defd03-390d-4347-8d92-01e0ef49a9e7
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: e2d0ecf8-d4b2-4f62-a813-0ad78e899c64
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: 6ae88eb9-7132-4144-84c4-dc474c88ae4c
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 7a723364-52ee-4519-ab2d-04a9e20a14d1
+		summarizeBy: sum
+		sourceColumn: Forecast Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT'
+		dataType: double
+		lineageTag: 794b2702-ea6d-43d1-a3d3-11e2676b2c91
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT 3 year'
+		dataType: double
+		lineageTag: e4a90bf7-31c0-4f6b-af46-38c1f85d800d
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 1f1ef560-db7e-4255-b59b-e17a117fbc89
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT BUD'
+		dataType: double
+		lineageTag: 58558afc-0f68-42ca-b2c5-04eb55cb1de1
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT Lag1'
+		dataType: double
+		lineageTag: e4918d1e-f717-4917-8224-775f987a2bcf
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: 032aa665-32c5-42b7-bb28-cf4c606f581e
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 272dd447-4d46-4ac4-97d7-7f1ec6b767a7
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MAT LAG1 BUD'
+		dataType: double
+		lineageTag: bb708b10-76c0-4898-b0c2-9b5b8dce4eea
+		summarizeBy: sum
+		sourceColumn: Forecast Value MAT LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value MTH'
+		dataType: double
+		lineageTag: 7bb6f34e-874b-4408-b4e8-24621ec30d81
+		summarizeBy: sum
+		sourceColumn: Forecast Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value BUD'
+		dataType: double
+		lineageTag: 2d8c6e05-6f17-4de4-9c85-7bb50c596c89
+		summarizeBy: sum
+		sourceColumn: Forecast Value BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD'
+		dataType: double
+		lineageTag: de3609a1-5b46-411d-89ff-4f2086a865a5
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD 3 years'
+		dataType: double
+		lineageTag: d595124c-3e12-4bef-a223-875198c5d65b
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 2898df3c-aef5-4c1a-af82-100945a51d70
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD BUD'
+		dataType: double
+		lineageTag: de9e591e-c798-4f1c-a619-6d3fb0503ecc
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD Lag1'
+		dataType: double
+		lineageTag: eefc661c-2291-4ccc-8f3d-ac696fcefc5c
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: a5d8f0d5-2b1c-4d39-8261-d848661afa38
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 69694995-8602-4f42-bbcb-0bc4637cb4be
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Forecast Value YTD LAG1 BUD'
+		dataType: double
+		lineageTag: 88ba7bac-3675-424a-808e-f4f1079b89bd
+		summarizeBy: sum
+		sourceColumn: Forecast Value YTD LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M'
+		dataType: double
+		lineageTag: cab8afcf-3795-444d-8015-03544ed6b226
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M BUD -1'
+		dataType: double
+		lineageTag: 7ab40452-8d5c-427f-a2ff-6f3784529cc9
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M Lag1'
+		dataType: double
+		lineageTag: d012790d-10d0-466a-bf72-f672def18f19
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M LAG1 BUD -1'
+		dataType: double
+		lineageTag: 14d3620a-2184-4252-8894-0845115def96
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: 74ae5a42-ea01-457a-bb09-d72c46fa7c92
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 564e3847-8f60-4c04-87db-77667ab8df36
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: 6b3dfe74-4ce3-442f-8bbf-c57a780646c0
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 476c4ae6-4edb-469d-b582-77688cb4f201
+		summarizeBy: sum
+		sourceColumn: GM Actual Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT'
+		dataType: double
+		lineageTag: 7c8e3259-4f1a-4267-8fa7-88706fac4106
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT 3 year'
+		dataType: double
+		lineageTag: 2a7a7b8c-17e1-4759-a278-7f386771f802
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 75f2b385-5f9c-461a-8342-552b2edfb4c5
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT BUD -1'
+		dataType: double
+		lineageTag: 30a232cd-0b72-4a63-bf7f-23f45ad0015f
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT Lag1'
+		dataType: double
+		lineageTag: b2f2135c-9810-4cfc-a913-816be0154bbc
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: 12be5e00-4783-43e1-b1c8-b5c420e0cba6
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: fc4aeb4c-198a-4c30-a1a0-453911991dfa
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MAT LAG1 BUD -1'
+		dataType: double
+		lineageTag: cf2ea3f4-5d94-40a2-a3e3-fce38dde57c9
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MAT LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value MTH'
+		dataType: double
+		lineageTag: 2165f3d7-32f0-496c-ae60-f70d7adec215
+		summarizeBy: sum
+		sourceColumn: GM Actual Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value BUD -1'
+		dataType: double
+		lineageTag: 752fc3e9-4a98-498c-8659-8fe81275f190
+		summarizeBy: sum
+		sourceColumn: GM Actual Value BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD'
+		dataType: double
+		lineageTag: e872641a-9a24-47c5-ab93-e775ad108191
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD 3 years'
+		dataType: double
+		lineageTag: 60d8bc22-8dbc-4fa5-a9da-1d0fe86fb3d4
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 3d98d70e-9212-4b54-b9b3-731a40cb0e5a
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD BUD -1'
+		dataType: double
+		lineageTag: a353a94c-e592-47ce-ba93-f95ef0e23818
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD Lag1'
+		dataType: double
+		lineageTag: 3857d811-1a76-431c-8010-ceb67c63f2c7
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: 9803e171-91c0-468c-ab9f-64e53822b17d
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 3ada1028-3fc8-4fd1-9fa9-82fb23f88e03
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Actual Value YTD LAG1 BUD -1'
+		dataType: double
+		lineageTag: 7e5a9747-cac0-490c-b670-a63cb4efc765
+		summarizeBy: sum
+		sourceColumn: GM Actual Value YTD LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget MAT'
+		dataType: double
+		lineageTag: 44593ce2-b101-47c6-a27f-5f02534a8fdb
+		summarizeBy: sum
+		sourceColumn: GM Budget MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value BUD -1'
+		dataType: double
+		lineageTag: cd7a7e5e-35ce-4308-8af4-6e2fd21648c4
+		summarizeBy: sum
+		sourceColumn: GM Budget Value BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M'
+		dataType: double
+		lineageTag: 97f8fa26-caa5-4d17-af9d-851678f5dca2
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M BUD -1'
+		dataType: double
+		lineageTag: 8523e471-2e91-462d-a26e-0d5b95634fc8
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M Lag1'
+		dataType: double
+		lineageTag: 34311821-7445-4606-bfdb-1b6af960e398
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M LAG1 BUD -1'
+		dataType: double
+		lineageTag: 2f62a508-f8bb-44f0-bfe3-3274f0289582
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 7e35054d-5fae-49b2-b177-6ad08aa32a72
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M LAG1 LPPM 3 years-1'
+		dataType: double
+		lineageTag: 36ba093c-3a0b-46aa-a9e7-94a58e396f2a
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M LAG1 LPPM 3 years-1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M LPPM 3 years-1'
+		dataType: double
+		lineageTag: fa3140d0-74a5-4c3f-bca5-1d1860d83b1f
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M LPPM 3 years-1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 16f3bfbe-c062-408d-b720-34cc4fff215a
+		summarizeBy: sum
+		sourceColumn: GM Budget Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT 3 year'
+		dataType: double
+		lineageTag: 808c3c95-f658-4542-8a9a-791e87ad31b2
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 96e866da-29fa-4082-a2a1-07dbb513a8a7
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget MAT BUD  23'
+		dataType: double
+		lineageTag: 30f94797-15d3-4b76-b2f3-54e6185cb66f
+		summarizeBy: sum
+		sourceColumn: GM Budget MAT BUD  23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT Lag1'
+		dataType: double
+		lineageTag: 54aa715e-a28d-4db0-864e-bb50b871b67e
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: 9394f02f-ab5e-4bca-a8f3-1c5ad4fc7597
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: ef8045b8-a4ee-41b0-8340-eca0acf34c4e
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MAT LAG1 BUD -1'
+		dataType: double
+		lineageTag: 1960b349-400a-4514-b576-c72adb210b80
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MAT LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value MTH'
+		dataType: double
+		lineageTag: 1c00b6a6-3176-4c08-a3ee-c2192ffe87ce
+		summarizeBy: sum
+		sourceColumn: GM Budget Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD 3 years'
+		dataType: double
+		lineageTag: 8e3a9e4c-1e6b-4b69-afb5-7249c28e8e9a
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 1f082cdf-717e-48e0-b7e9-3a513916b16c
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD Lag1'
+		dataType: double
+		lineageTag: b2b95ae1-fb0e-494c-8140-c955791f27ac
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: ea38bc66-0239-4fb6-a577-4012ed6fe516
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 03bc47f3-114d-4e44-b2a8-d9e372879336
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget Value YTD LAG1 BUD -1'
+		dataType: double
+		lineageTag: c2e1fbe9-cde4-418d-8389-0e57c12d4314
+		summarizeBy: sum
+		sourceColumn: GM Budget Value YTD LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget YTD'
+		dataType: double
+		lineageTag: df4199cf-9527-4aa0-844b-3337bde2bb26
+		summarizeBy: sum
+		sourceColumn: GM Budget YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Budget YTD BUD  23'
+		dataType: double
+		lineageTag: 62233a29-0703-4346-8d3e-bd0153c86e4b
+		summarizeBy: sum
+		sourceColumn: GM Budget YTD BUD  23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast MAT'
+		dataType: double
+		lineageTag: c088c17f-e4fa-4e86-9c59-13ea713ca331
+		summarizeBy: sum
+		sourceColumn: GM Forecast MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast MAT BUD  23'
+		dataType: double
+		lineageTag: 304b3ad4-3c70-4044-9319-b082cef6d597
+		summarizeBy: sum
+		sourceColumn: GM Forecast MAT BUD  23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M'
+		dataType: double
+		lineageTag: 1d47fbf7-5ea4-4d58-82fe-63e54cf6f8a9
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M BUD -1'
+		dataType: double
+		lineageTag: 4959eb28-07b5-488d-b82c-d280dbd4c039
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M Lag1'
+		dataType: double
+		lineageTag: a37e771f-296a-4894-aa0f-960790cf4cf4
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M LAG1 BUD -1'
+		dataType: double
+		lineageTag: 3aaa130e-8e7d-417c-81a3-e85802f6c2ad
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: 0c95745e-ee97-4bb5-afbf-54750040c9d5
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 239a3e82-7068-49e9-af96-a6366d217b68
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: f6517f04-5409-425c-ad30-1c94b517b0c8
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: a26f07ec-228b-4987-b746-a425f4feab05
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT 3year'
+		dataType: double
+		lineageTag: 6b9876c5-0bde-425a-ada8-80bcd13f1ddc
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT 3year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 5e40dac0-7c9d-4760-a69d-ac9405a3e2e9
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT Lag1'
+		dataType: double
+		lineageTag: 34478b90-9c00-4018-b2e1-c442ba96f79d
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: e31546f3-4ac9-4b48-8384-17a1112b74e2
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 4abdaa29-b181-4a5f-ba14-10f684199a91
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MAT LAG1 BUD -1'
+		dataType: double
+		lineageTag: cd0705c9-5933-4a97-a186-9856e70baf24
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MAT LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value MTH'
+		dataType: double
+		lineageTag: 39e64897-a11b-4856-934e-091c9eef5245
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value BUD -1'
+		dataType: double
+		lineageTag: 742134ca-3346-4901-9c95-a7689bf77198
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD 3 years'
+		dataType: double
+		lineageTag: a01e4219-c107-42b1-9004-c907fe18783e
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: bb47374e-7eaf-457e-ad3a-419a99f02662
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD Lag1'
+		dataType: double
+		lineageTag: 8117bf78-c7aa-46f0-9746-2b7ec0160ae3
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: 4df7822d-53fa-4024-9430-971c48c3360f
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: a6545969-cfec-4d3f-a7e9-28786f283d4a
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast Value YTD LAG1 BUD -1'
+		dataType: double
+		lineageTag: 468b988f-402a-4184-9f3a-94e0b0e4c79a
+		summarizeBy: sum
+		sourceColumn: GM Forecast Value YTD LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast YTD'
+		dataType: double
+		lineageTag: 0b268f4c-705d-4902-a35a-0ab7c81b373d
+		summarizeBy: sum
+		sourceColumn: GM Forecast YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Forecast YTD BUD  23'
+		dataType: double
+		lineageTag: 45d37c2c-972a-44f1-8cc6-9df89e3770ff
+		summarizeBy: sum
+		sourceColumn: GM Forecast YTD BUD  23
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M'
+		dataType: double
+		lineageTag: 0332f774-f086-4535-a0f2-c2bb9e3b6fe8
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M BUD -1'
+		dataType: double
+		lineageTag: 0cbda5af-b7d3-4c6e-9c0d-378c10a64073
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M Lag1'
+		dataType: double
+		lineageTag: 30b66f74-6472-4c2e-92a5-455763fc48d6
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M LAG1 BUD -1'
+		dataType: double
+		lineageTag: 2fe86651-2db9-480a-8f92-219151c2a582
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: 7c1bc5de-e5dc-4616-a8ff-6722f842994b
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: d5720c52-4d9f-4285-9301-213eb0b1334b
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: 9030ce48-de2e-4992-b6fc-aeeefd2ab8b0
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 36f66b25-b3ee-45e7-a19f-53ce8e938f5a
+		summarizeBy: sum
+		sourceColumn: GM Plan Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT'
+		dataType: double
+		lineageTag: 125bb938-3848-44d8-bea7-4bc7433d348b
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT 3 year'
+		dataType: double
+		lineageTag: 6142b7f6-90a2-4280-8d88-9c9d62a464b4
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 501d096c-8ff3-406b-9659-006e20775ff2
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT BUD -1'
+		dataType: double
+		lineageTag: 37e50abd-eaae-4230-bbf8-a6e8d20bae20
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT Lag1'
+		dataType: double
+		lineageTag: 64e09979-2c47-490e-bd50-60b9e3a4a4e0
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: 731786ef-884f-4aab-ada8-659f1a1db388
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 9754066e-00e1-4766-a783-62b5a1e584b1
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MAT LAG1 BUD -1'
+		dataType: double
+		lineageTag: 3cc8c0f9-24f4-4c5c-8132-29096037d8d9
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MAT LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value MTH'
+		dataType: double
+		lineageTag: c0a77740-ee21-49ba-8b39-f1f02b87196a
+		summarizeBy: sum
+		sourceColumn: GM Plan Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value BUD -1'
+		dataType: double
+		lineageTag: b487b2cd-2baf-47e1-908e-076697d8e1e1
+		summarizeBy: sum
+		sourceColumn: GM Plan Value BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD'
+		dataType: double
+		lineageTag: d948ac4c-e26c-4195-a90b-ddae66e9e035
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD 3 years'
+		dataType: double
+		lineageTag: 811127ef-a6d2-49ff-a7d9-28ddee457379
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 9c017525-4ece-4266-b736-59c0ac316ea3
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD BUD -1'
+		dataType: double
+		lineageTag: 6f8883e1-5092-4f3c-a47d-6f11b5c2471e
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD Lag1'
+		dataType: double
+		lineageTag: 942d8690-4ca3-472d-b564-0fc3ad7a399b
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: 8abf9bb3-cf6c-4099-9fc3-bcf53acefe93
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 915bcda8-fe95-4f18-b2a9-ec94397d1f44
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'GM Plan Value YTD LAG1 BUD -1'
+		dataType: double
+		lineageTag: 48941c78-696b-4cb4-9d08-f37cd6e5349b
+		summarizeBy: sum
+		sourceColumn: GM Plan Value YTD LAG1 BUD -1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M'
+		dataType: double
+		lineageTag: fcc68589-7b33-49fd-bcaf-dad3e9ca14fc
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M BUD'
+		dataType: double
+		lineageTag: 9d9b28c2-9cc2-439d-bbdd-87b2ad8af3bd
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M Lag1'
+		dataType: double
+		lineageTag: 1acfdfa2-2641-4e86-a07d-f2db38d8bc9f
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M LAG1 BUD-1-1'
+		dataType: double
+		lineageTag: ece4be01-89c4-4b89-a0a4-e32f167396ad
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M LAG1 BUD-1-1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M Lag1 LPPM 3 years'
+		dataType: double
+		lineageTag: d6d38111-1eeb-4e41-ba07-ffdea972ad39
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M Lag1 LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M Lag1 LPPM 3 years BUD'
+		dataType: double
+		lineageTag: e35caf37-5f62-45f4-8f32-17b4a9a35c45
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M Lag1 LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M LPPM 3 years'
+		dataType: double
+		lineageTag: 8a31b64b-20b2-4e80-9927-a4dd94105319
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M LPPM 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value L3M LPPM 3 years BUD'
+		dataType: double
+		lineageTag: 4a5b3585-5efc-4e6e-8ac7-7ce14e9e1b5b
+		summarizeBy: sum
+		sourceColumn: LPPM Value L3M LPPM 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT'
+		dataType: double
+		lineageTag: 77149da7-3e5a-4ed0-911c-f72a09ec0916
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT 3 year'
+		dataType: double
+		lineageTag: abd1571d-8d94-402f-bc08-86a0b655fda2
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT 3 years BUD'
+		dataType: double
+		lineageTag: 9e5a994d-0c3c-4169-ba98-e3bff2befc34
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT BUD'
+		dataType: double
+		lineageTag: 0f3bb759-89d5-40a0-a592-f45a94826962
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT Lag1'
+		dataType: double
+		lineageTag: 3467585a-818c-49a9-8bcf-e914687f3a17
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT Lag1 3 year'
+		dataType: double
+		lineageTag: a9543733-ff8b-4d40-a233-c5447eacb7fb
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT Lag1 3 year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT Lag1 3 years BUD'
+		dataType: double
+		lineageTag: ed547ccc-0fe1-4a24-b3b0-8298ad03cdac
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MAT LAG1 BUD'
+		dataType: double
+		lineageTag: 8f697b6d-91c9-499c-9863-22d1e701c7f6
+		summarizeBy: sum
+		sourceColumn: LPPM Value MAT LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value MTH'
+		dataType: double
+		lineageTag: c04d5653-ce3e-43c3-947a-5f5506af6075
+		summarizeBy: sum
+		sourceColumn: LPPM Value MTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value BUD'
+		dataType: double
+		lineageTag: 2a45fd3e-71c1-43d3-b26f-57e801ae2bc9
+		summarizeBy: sum
+		sourceColumn: LPPM Value BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD'
+		dataType: double
+		lineageTag: c556017d-5db7-471c-a0a1-e553678c6d37
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD 3 years'
+		dataType: double
+		lineageTag: f6c350b8-b646-46a3-966d-61124c5421ac
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD 3 years BUD'
+		dataType: double
+		lineageTag: 950e0f04-93ef-4113-bb40-e96047dbb390
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD BUD'
+		dataType: double
+		lineageTag: f4dd7f12-7f63-4385-a434-6d4fc19e83e4
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD Lag1'
+		dataType: double
+		lineageTag: 5131c71a-4b1f-4f24-b404-2d2af84eaeb7
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD Lag1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD Lag1 3 years'
+		dataType: double
+		lineageTag: 65d610bf-88a3-41da-8c2c-d7808c40a0fe
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD Lag1 3 years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD Lag1 3 years BUD'
+		dataType: double
+		lineageTag: 5b3c6458-639c-4b84-ab88-5cceedbd12fa
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD Lag1 3 years BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'LPPM Value YTD LAG1 BUD'
+		dataType: double
+		lineageTag: 4118458e-03f0-4f89-85a4-301512182230
+		summarizeBy: sum
+		sourceColumn: LPPM Value YTD LAG1 BUD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DATASET_VERSION
+		dataType: string
+		lineageTag: d2bb4b6c-6c6c-4183-b264-fec598397357
+		summarizeBy: none
+		sourceColumn: DATASET_VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition t_lx_legacy_release = m
+		mode: import
+		source =
+				let
+				    Source = Databricks.Catalogs("adb-2802134235696011.11.azuredatabricks.net", "sql/protocolv1/o/2802134235696011/1120-114408-ofsk3vf4", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery="enabled", Implementation=null]),
+				    chdaa_dev_dp_bro_Database = Source{[Name="chdaa_dev_dp_bro",Kind="Database"]}[Data],
+				    lx_curated_disc_Schema = chdaa_dev_dp_bro_Database{[Name="lx_curated_disc",Kind="Schema"]}[Data],
+				    t_lx_legacy_release_Table = lx_curated_disc_Schema{[Name="t_lx_legacy_release",Kind="Table"]}[Data]
+				in
+				    t_lx_legacy_release_Table
+

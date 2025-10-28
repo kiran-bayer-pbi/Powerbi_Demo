@@ -1,0 +1,37 @@
+table 'Slicer Month'
+	lineageTag: 4fc778e3-8c26-43b8-8238-f1ff99732a80
+
+	column MonthStart
+		formatString: General Date
+		lineageTag: 58f05009-00e8-4a8b-af07-560a01dd904d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthStart]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYear
+		lineageTag: e13c2d1f-6b69-4288-9b92-e9c8af084291
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthYear]
+		sortByColumn: MonthStart
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Slicer Month' = calculated
+		mode: import
+		source = ```
+				
+				VAR Months =
+				    ADDCOLUMNS (
+				        SUMMARIZE ( 'Dim Date', 'Dim Date'[Year], 'Dim Date'[Month Number] ),
+				        "MonthStart", DATE ( 'Dim Date'[Year], 'Dim Date'[Month Number], 1 ),
+				        "MonthYear", FORMAT ( DATE ( 'Dim Date'[Year], 'Dim Date'[Month Number], 1 ), "MMM yyyy" )
+				    )
+				RETURN DISTINCT ( SELECTCOLUMNS ( Months, "MonthStart", [MonthStart], "MonthYear", [MonthYear] ) )
+				
+				```
+
+	annotation PBI_Id = debe7818e2054d3289e423ca6fc2a7e3
+

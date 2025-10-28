@@ -1,0 +1,64 @@
+relationship 26fcf348-11ff-9469-c5ad-4ec74b9b94ca
+	fromColumn: 'Fact Innovation 360'.'BSV Lvl 6'
+	toColumn: 'Dim Geography'.'BSV Lvl 6'
+
+relationship 57203b20-89de-c324-d291-4ff1527420c2
+	fromColumn: 'Fact Innovation 360'.year
+	toColumn: 'Dim Date'.Date
+
+relationship AutoDetected_a8f4fe35-9c50-4b93-a584-520764d5be07
+	fromColumn: 'Fact LTP101'.Material
+	toColumn: 'Dim Brand LTP101'.Material
+
+relationship f790c02c-5227-22fb-7b0f-359e28c82034
+	fromColumn: 'Fact LTP101'.'Fiscal year'
+	toColumn: 'Dim Date'.Date
+
+relationship 7ac525b4-c84b-31f9-72c8-c110905fa34a
+	fromColumn: 'Fact LTP101'.'BSV Lvl 6'
+	toColumn: 'Dim Geography'.'BSV Lvl 6'
+
+relationship AutoDetected_f870c3db-bc34-46f5-9b96-4960c896839a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Fact R&D'.'Project ID #'
+	toColumn: 'Dim R&D'.'Project ID #'
+
+relationship 990f572a-91be-86ef-a55a-558a81e5f816
+	fromColumn: 'Fact Innovation 360'.LPPM
+	toColumn: 'Dim LPPM'.LPPM
+
+relationship fdf6d5c5-851b-cc19-aca7-4094630b5c22
+	fromColumn: 'FACT LPPM'.LPPM
+	toColumn: 'Dim LPPM'.LPPM
+
+relationship 1e99657a-9fb0-43b8-9563-7231cbb5bb65
+	fromColumn: 'FACT LPPM'.'BSV Lvl 6'
+	toColumn: 'Dim Geography'.'BSV Lvl 6'
+
+relationship 42d96150-6793-8200-f85d-49903baf90f9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Dim LPPM'.'NPD Lvl.2'
+	toColumn: 'Fact R&D'.'Project ID #'
+
+relationship AutoDetected_9ef1a3d5-42e9-4601-8ae3-472612167c23
+	fromColumn: 'Innovation Base query'.'Reporting Unit'
+	toColumn: 'Dim Category'.'Reporting Unit'
+
+relationship AutoDetected_407edc9f-858d-489e-8de8-1c01c8422ac3
+	fromColumn: 'FACT LPPM'.'Reporting Unit'
+	toColumn: 'Dim Category'.'Reporting Unit'
+
+relationship AutoDetected_5126ee6d-16b4-4847-89e2-6a1c1698653b
+	fromColumn: 'Dim Brand'.'Reporting Unit'
+	toColumn: 'Dim Category'.'Reporting Unit'
+
+relationship AutoDetected_2f84f90e-695a-4e5c-b55e-1d81092bf86e
+	fromColumn: Fact.'Reporting Unit'
+	toColumn: 'Dim Category'.'Reporting Unit'
+
+relationship AutoDetected_bf9cfc51-84b0-4e58-badc-2c46c60c1b0b
+	isActive: false
+	fromColumn: 'Dim LPPM'.'Reporting Unit'
+	toColumn: 'Dim Category'.'Reporting Unit'
+

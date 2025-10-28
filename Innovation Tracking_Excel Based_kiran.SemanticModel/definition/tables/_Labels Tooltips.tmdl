@@ -1,0 +1,23 @@
+table '_Labels Tooltips'
+	lineageTag: 2b291ca8-9316-4620-ba6e-79553abd1efb
+
+	measure 'I button' = UNICHAR(128712)
+		lineageTag: 7f5df16c-9971-4dc6-91ba-75243f95a924
+
+	column Column
+		formatString: 0
+		lineageTag: f7ccbe21-5ff5-4da9-afae-182b5fc9cc4e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '_Labels Tooltips' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 58dc5704b92f47b7a9ea2385d4ff6b9b
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

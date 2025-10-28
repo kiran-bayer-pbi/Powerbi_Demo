@@ -1,0 +1,50 @@
+table 'Period Filter'
+	lineageTag: bf53e335-efad-479f-a4cc-520e9725c9c6
+
+	column Period
+		lineageTag: e9d85a1e-2417-4ae0-bb24-85c45f63c94f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Period]
+		sortByColumn: Order
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order
+		formatString: 0
+		lineageTag: 6b757958-d23d-46a4-b4b0-1aa497ff24ac
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desc
+		lineageTag: b839e795-8497-4b1b-bfb5-fcb34dfd5983
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Desc]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Period Filter' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Period", STRING,
+				    "Order", INTEGER,
+				    "Desc",STRING,
+				    {
+				        {"P3M", 2, "Past 3 Months"},
+				        {"P6M", 3,"Past 6 Months"},
+				        {"MAT", 4,"Past 12 Months"},
+				        {"Month", 1,"Past 1 Month"},
+				        {"YTD", 5,"Year to Date"}
+				    }    
+				
+				)
+				```
+
+	annotation PBI_Id = 6b2a4a5aa68849419981ce606ea4c5d1
+

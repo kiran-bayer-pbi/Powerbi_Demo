@@ -1,0 +1,95 @@
+table 'Dim Brand LTP101'
+	lineageTag: ed185f8c-df5b-48aa-9085-f7856416ba24
+
+	column 'CV 7 Reporting Unit'
+		dataType: string
+		lineageTag: 852ad636-93ca-42f7-8e72-00a2140953c0
+		summarizeBy: none
+		sourceColumn: CV 7 Reporting Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CV Brand Family'
+		dataType: string
+		lineageTag: 4e926d43-f70c-4e0c-9858-465f0f91b51d
+		summarizeBy: none
+		sourceColumn: CV Brand Family
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CV Brand'
+		dataType: string
+		lineageTag: be2cdd19-bbe7-40af-92c8-e40e3bc09b9b
+		summarizeBy: none
+		sourceColumn: CV Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (NPD)'
+		dataType: string
+		lineageTag: 45d0e34e-47ea-4f56-8704-d0a23dd3bbea
+		summarizeBy: none
+		sourceColumn: Brand Name (NPD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Formulation
+		dataType: string
+		lineageTag: 5275a461-ff90-4c11-b60c-00b64544a33e
+		summarizeBy: none
+		sourceColumn: Formulation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formulation Name'
+		dataType: string
+		lineageTag: d7d999f0-7fd0-4793-8321-6f4f77a11c04
+		summarizeBy: none
+		sourceColumn: Formulation Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: f13e769a-acca-4f2a-aab1-7d69ccc4ded9
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material Name'
+		dataType: string
+		lineageTag: 47e3f75d-b342-475d-9bf8-1fa88a4716b3
+		summarizeBy: none
+		sourceColumn: Material Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pack Size'
+		dataType: string
+		lineageTag: 247cb7b0-ba50-4447-9ad4-79c2a50427fc
+		summarizeBy: none
+		sourceColumn: Pack Size
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Brand LTP101' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://bayergroup.sharepoint.com/sites/MarketingControlling/", [ApiVersion = 15]),
+				    #"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/" = Source{[Name="Innovation360.xlsx",#"Folder Path"="https://bayergroup.sharepoint.com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"),
+				    #"LTP101 @BUD_Sheet" = #"Imported Excel Workbook"{[Item="LTP101 @BUD",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"LTP101 @BUD_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Income Statement (P&L).", type text}, {"BSV Lvl 2", type text}, {"BSV Lvl 3", type text}, {"BSV Lvl 4", type text}, {"BSV Lvl 5", type text}, {"BSV Lvl 6", type text}, {"Type", type text}, {"NPD Lvl.2", type text}, {"NPD Name", type text}, {"LPPM", type text}, {"LPPM Name", type text}, {"CV 7 Reporting Unit", type text}, {"CV Brand Family", type text}, {"CV Brand", type text}, {"Brand Name (NPD)", type text}, {"Formulation", type text}, {"Formulation Name", type text}, {"Material", type text}, {"Material Name", type text}, {"Pack Size", type text}, {"LPPM Innovation Type", type text}, {"NPD R&D Proj.Class", type text}, {"LPPM Status", type text}, {"LPPM Lauch year", type text}, {"LPPM Launch month/year", type text}, {"NPD First Launch Year", type text}, {"Enterprise Classification", type text}, {"Fiscal year", type text}, {"Fiscal year/period", type text}, {"Posting period", type text}, {"LPPM @BUD CY", type any}, {"ACT @BUD CY", type any}, {"BUD @BUD CY", type any}, {"FC @BUD CY", type any}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Top Rows",{"Income Statement (P&L).", "BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5", "BSV Lvl 6", "Type", "NPD Lvl.2", "NPD Name", "LPPM", "LPPM Name", "LPPM Innovation Type", "NPD R&D Proj.Class", "LPPM Status", "LPPM Lauch year", "LPPM Launch month/year", "NPD First Launch Year", "Enterprise Classification", "Fiscal year", "Fiscal year/period", "Posting period", "LPPM @BUD CY", "ACT @BUD CY", "BUD @BUD CY", "FC @BUD CY"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns", {"Material"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

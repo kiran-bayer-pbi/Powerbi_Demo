@@ -1,0 +1,41 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-CH
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Fact Table Snowflake","Query1 (2)","Value Table","Innovation Base query","Dim Geography","FACT LPPM","Dim NPD","Dim Brand","Fact","Fact Innovation 360","Dim Brand LTP101","Fact LTP101","Dim R&D","Fact R&D","t_lx_legacy_release","Dim LPPM","Dim Category"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Fact Table Snowflake'
+ref table 'Dim Date'
+ref table 'Query1 (2)'
+ref table 'Period Filter'
+ref table '_Measures Table'
+ref table 'Value Table'
+ref table YearParameter
+ref table '_Labels Measures'
+ref table 'Slicer Month'
+ref table 'Innovation Base query'
+ref table 'Dim Geography'
+ref table 'FACT LPPM'
+ref table 'Dim NPD'
+ref table 'Dim Brand'
+ref table Fact
+ref table 'Fact Innovation 360'
+ref table 'Dim Brand LTP101'
+ref table 'Fact LTP101'
+ref table 'Dim R&D'
+ref table 'Fact R&D'
+ref table t_lx_legacy_release
+ref table 'Dim LPPM'
+ref table 'Dim Category'
+ref table '_Labels Tooltips'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY23SU04",
+      "reportVersionAtImport": {
+        "visual": "1.8.82",
+        "report": "2.0.82",
+        "page": "1.3.82"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "calendarVisual74934D05B71F4C31B0F79D925EE89638",
+    "waterfall6C9ED82ABD1F44C4A0D590CE01EB5EE7",
+    "ZebraBITablesBAE31B370F254F808553548EFB35BFA5",
+    "zebraBiCards2C860CFAA9944091B75F0DBD117F20FA"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY23SU04",
+          "path": "BaseThemes/CY23SU04.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Green_Modern_Marketing_Logo_(46633495146386701.png",
+          "path": "Green_Modern_Marketing_Logo_(46633495146386701.png",
+          "type": "Image"
+        },
+        {
+          "name": "BAYN.DE-914e95003788601263508776.png",
+          "path": "BAYN.DE-914e95003788601263508776.png",
+          "type": "Image"
+        },
+        {
+          "name": "background-gradient-lights9676981063798944.jpg",
+          "path": "background-gradient-lights9676981063798944.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Picture32565426149458512.png",
+          "path": "Picture32565426149458512.png",
+          "type": "Image"
+        },
+        {
+          "name": "Innovation360_background129386609920404875.png",
+          "path": "Innovation360_background129386609920404875.png",
+          "type": "Image"
+        },
+        {
+          "name": "final_bg_innovation_260715892156599384.png",
+          "path": "final_bg_innovation_260715892156599384.png",
+          "type": "Image"
+        },
+        {
+          "name": "bg_final365506349576902.png",
+          "path": "bg_final365506349576902.png",
+          "type": "Image"
+        },
+        {
+          "name": "Innovation360_background129412532684414057.png",
+          "path": "Innovation360_background129412532684414057.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

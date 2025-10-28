@@ -1,0 +1,912 @@
+table 'Dim R&D'
+	lineageTag: bf280ae5-15a4-4267-8f6b-392ca2c395af
+
+	column 'Project ID #'
+		dataType: string
+		lineageTag: 9548862f-6a1a-4455-913f-188a37b36f04
+		summarizeBy: none
+		sourceColumn: Project ID #
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project
+		dataType: string
+		lineageTag: 62986daa-f5d7-40ac-8aa7-08afc982293b
+		summarizeBy: none
+		sourceColumn: Project
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Program ID #'
+		dataType: string
+		lineageTag: 27267782-8f25-4232-95ac-955ddd60a316
+		summarizeBy: none
+		sourceColumn: Program ID #
+
+		annotation SummarizationSetBy = Automatic
+
+	column Program
+		dataType: string
+		lineageTag: 891975df-e483-4961-82d9-be64df516512
+		summarizeBy: none
+		sourceColumn: Program
+
+		annotation SummarizationSetBy = Automatic
+
+	column GCBU
+		dataType: string
+		lineageTag: 4a3f65d3-6792-41f7-8808-3eaa6bd8299b
+		summarizeBy: none
+		sourceColumn: GCBU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: b182538e-9e33-41f2-bc48-d5dd79caa6e9
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 2ab53a5a-0628-466c-929d-5d19d846812c
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Cancellation Date'
+		dataType: string
+		lineageTag: 1c2727b9-8040-47be-9773-576410013999
+		summarizeBy: none
+		sourceColumn: Project Cancellation Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cancellation Reason'
+		dataType: string
+		lineageTag: 2d44d71b-f655-4e76-8601-b52dfef2f3b4
+		summarizeBy: none
+		sourceColumn: Cancellation Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Project Classification'
+		dataType: string
+		lineageTag: 8c4bf6db-cf52-4778-a05b-194d977dddc7
+		summarizeBy: none
+		sourceColumn: R&D Project Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estimated Size of Opportunity (Y3 Incr NS in Mio €)'
+		dataType: double
+		lineageTag: 0753a976-0d73-4aa3-9537-e2244c4183e7
+		summarizeBy: sum
+		sourceColumn: Estimated Size of Opportunity (Y3 Incr NS in Mio €)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Estimated Size of Opportunity (Y5 Incr NS in Mio €)'
+		dataType: double
+		lineageTag: 15e8e28a-577c-4be5-98d1-0c83f6c322bc
+		summarizeBy: sum
+		sourceColumn: Estimated Size of Opportunity (Y5 Incr NS in Mio €)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PLS (in Mio €)'
+		dataType: double
+		lineageTag: 629d6e00-8f0b-4feb-9c82-227f82a586f3
+		summarizeBy: sum
+		sourceColumn: PLS (in Mio €)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column '1st Launch Market'
+		dataType: string
+		lineageTag: e5588827-4f9c-44a9-a081-44b93f4c2822
+		summarizeBy: none
+		sourceColumn: 1st Launch Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Launch Date'
+		dataType: string
+		lineageTag: 8ad03184-1a2f-48ae-bb79-79e5de34aa8b
+		summarizeBy: none
+		sourceColumn: LPPM Launch Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column '1st Launch Market Schedule Date'
+		dataType: string
+		lineageTag: 112f6013-9149-4cb5-a35d-8a42618d92e3
+		summarizeBy: none
+		sourceColumn: 1st Launch Market Schedule Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2nd Launch Market'
+		dataType: string
+		lineageTag: c3ce7dd3-1f70-420b-8eb6-ca788a80f61e
+		summarizeBy: none
+		sourceColumn: 2nd Launch Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Region 1st market'
+		dataType: string
+		lineageTag: 2e3540fb-0cc1-4a39-9da4-27b0dda86007
+		summarizeBy: none
+		sourceColumn: Region 1st market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Innovation Impact'
+		dataType: string
+		lineageTag: f5cd5be8-b7b7-4648-a1cc-bc8a1fddceef
+		summarizeBy: none
+		sourceColumn: Innovation Impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column Archetype
+		dataType: string
+		lineageTag: c4cf6c5a-c219-4d3c-b7fb-4430fcbadecc
+		summarizeBy: none
+		sourceColumn: Archetype
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Scope'
+		dataType: string
+		lineageTag: 13c2fc6f-6f7a-436c-ac27-a128db75266c
+		summarizeBy: none
+		sourceColumn: Project Scope
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Strategic Fit'
+		dataType: string
+		lineageTag: 64674820-aae2-40e9-bbcf-060e656ce7f2
+		summarizeBy: none
+		sourceColumn: Strategic Fit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Swimlane
+		dataType: string
+		lineageTag: 0c2a8a1e-9165-4928-8124-ce287967dcf7
+		summarizeBy: none
+		sourceColumn: Swimlane
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category Segment'
+		dataType: string
+		lineageTag: 5822cd66-43e5-4368-84a7-344bafe97905
+		summarizeBy: none
+		sourceColumn: Category Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Budget Group'
+		dataType: string
+		lineageTag: 4a364eb2-01f5-4b7f-a717-fe247556a0a1
+		summarizeBy: none
+		sourceColumn: R&D Budget Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Management Group'
+		dataType: string
+		lineageTag: 3de37acb-8522-441a-ba54-98bb4e87433b
+		summarizeBy: none
+		sourceColumn: R&D Management Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Classification'
+		dataType: string
+		lineageTag: aaf8e54e-04cc-4811-bfb9-96130be1c967
+		summarizeBy: none
+		sourceColumn: Brand Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dossier Type'
+		dataType: string
+		lineageTag: e74f2d49-74a8-4266-9352-79d3c23ab15d
+		summarizeBy: none
+		sourceColumn: Dossier Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tracking Status'
+		dataType: string
+		lineageTag: db71c6d8-3004-46d1-8c7e-f63998796a94
+		summarizeBy: none
+		sourceColumn: Tracking Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Executive Summary'
+		dataType: string
+		lineageTag: 3c97918a-2dbe-4552-bb96-9a78e03dbdda
+		summarizeBy: none
+		sourceColumn: Executive Summary
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Leader'
+		dataType: string
+		lineageTag: ac6097b2-dabe-4e4c-8dd5-5ce4cc716a81
+		summarizeBy: none
+		sourceColumn: Project Leader
+
+		annotation SummarizationSetBy = Automatic
+
+	column Formulations
+		dataType: string
+		lineageTag: 7c154974-746e-4847-906f-51751d31f615
+		summarizeBy: none
+		sourceColumn: Formulations
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 41de71fd-3243-4a51-b46c-5ee000132276
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Description'
+		dataType: string
+		lineageTag: 81a568f8-de9a-4573-a2c7-3b0b3e9d7f24
+		summarizeBy: none
+		sourceColumn: Short Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Status'
+		dataType: string
+		lineageTag: a42f0728-fee2-4ea3-bc5d-d3f7907674ff
+		summarizeBy: none
+		sourceColumn: Project Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clinicals Required'
+		dataType: string
+		lineageTag: 3127d0e6-955a-4767-8c8a-dfec8f5daee7
+		summarizeBy: none
+		sourceColumn: Clinicals Required
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Initiation Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f3e7ef8-1282-47a5-8d7d-4dc1cc283855
+		summarizeBy: sum
+		sourceColumn: Project Initiation Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Creation Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d4235cc-911c-4997-afbb-1d7274697abb
+		summarizeBy: none
+		sourceColumn: Project Creation Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sustainability Rating'
+		dataType: string
+		lineageTag: 28d14ed7-afbf-4305-bcbf-d8c3e5c6aba2
+		summarizeBy: none
+		sourceColumn: Sustainability Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Uniqueness (Advantage Outcome)'
+		dataType: string
+		lineageTag: f380b10c-a243-4db6-a078-f61305033676
+		summarizeBy: none
+		sourceColumn: Uniqueness (Advantage Outcome)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ownability
+		dataType: string
+		lineageTag: 190cde86-4058-437d-ad68-45f2068dae5f
+		summarizeBy: none
+		sourceColumn: Ownability
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Latest Achieved Key Milestone'
+		dataType: string
+		lineageTag: 2b6931a2-6852-4e7e-9c74-75fcd6b12da2
+		summarizeBy: none
+		sourceColumn: Latest Achieved Key Milestone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Draft
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7f30c473-c116-4222-98e7-d10514bd1cbc
+		summarizeBy: none
+		sourceColumn: Draft
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scoping
+		dataType: string
+		lineageTag: f2111126-0897-4d60-88ea-118c847aef68
+		summarizeBy: none
+		sourceColumn: Scoping
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Feasibility Contract'
+		dataType: string
+		lineageTag: 8d1cf16a-b3d9-4fb4-ba12-efe435e75b05
+		summarizeBy: none
+		sourceColumn: Feasibility Contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Development Contract'
+		dataType: string
+		lineageTag: a811d2b0-f7fb-46c3-8d67-fed4074b41dc
+		summarizeBy: none
+		sourceColumn: Development Contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column GSC
+		dataType: string
+		lineageTag: 1b970072-ceac-4037-8ef7-6557aa9f3dc6
+		summarizeBy: none
+		sourceColumn: GSC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Small Scale'
+		dataType: string
+		lineageTag: f7e32d2c-781e-425c-9ec9-dc15c42d3b47
+		summarizeBy: none
+		sourceColumn: Small Scale
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Large Scale'
+		dataType: string
+		lineageTag: 4a273833-4436-434a-b9e3-7dd1961b1339
+		summarizeBy: none
+		sourceColumn: Large Scale
+
+		annotation SummarizationSetBy = Automatic
+
+	column Submission
+		dataType: string
+		lineageTag: dbd0474f-8711-4689-9e9f-d565a2e28837
+		summarizeBy: none
+		sourceColumn: Submission
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch Contract'
+		dataType: string
+		lineageTag: c2c32283-30c8-45c2-9708-4f56e6400abc
+		summarizeBy: none
+		sourceColumn: Launch Contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column '1st Launch'
+		dataType: string
+		lineageTag: 1d59bbb6-d66f-4aec-9117-b7f6b5f13608
+		summarizeBy: none
+		sourceColumn: 1st Launch
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2nd Launch'
+		dataType: string
+		lineageTag: f9999fcf-cd75-435b-87db-a64db8ebf079
+		summarizeBy: none
+		sourceColumn: 2nd Launch
+
+		annotation SummarizationSetBy = Automatic
+
+	column End
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c275bb32-8957-4458-92b7-158dedfcf9c7
+		summarizeBy: none
+		sourceColumn: End
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Duration – Development Contract to 1st Launch (in months)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 993052dc-5b71-4cb4-8a6c-361e9fcba440
+		summarizeBy: sum
+		sourceColumn: Project Duration – Development Contract to 1st Launch (in months)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Development Duration – Development Contract to Submission (in months)'
+		dataType: int64
+		formatString: 0
+		lineageTag: d06f4591-d1b9-47ac-8780-14335ca2d679
+		summarizeBy: sum
+		sourceColumn: Development Duration – Development Contract to Submission (in months)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Delay Reason'
+		dataType: string
+		lineageTag: 7810d4db-b379-439b-81c8-7003d9a757b2
+		summarizeBy: none
+		sourceColumn: Delay Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project History'
+		dataType: string
+		lineageTag: 4f4723d0-4018-45bf-bd9f-350b849fe311
+		summarizeBy: none
+		sourceColumn: Project History
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Development Type'
+		dataType: string
+		lineageTag: 6dcac13c-f065-4302-9d26-fea2f00039b2
+		summarizeBy: none
+		sourceColumn: Development Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Development Sites'
+		dataType: string
+		lineageTag: f2bc9f38-aad2-489b-8ba7-78213916a6a6
+		summarizeBy: none
+		sourceColumn: Development Sites
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Production Sites'
+		dataType: string
+		lineageTag: 0bd78dd6-94d6-467c-8da8-8fa855952321
+		summarizeBy: none
+		sourceColumn: Production Sites
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clinical Medical PTS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 96aa87b6-67e8-4735-bcc4-9055ea50bdf0
+		summarizeBy: sum
+		sourceColumn: Clinical Medical PTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Regulatory PTS'
+		dataType: int64
+		formatString: 0
+		lineageTag: b08d10f4-852b-4584-b135-4d09770bab2d
+		summarizeBy: sum
+		sourceColumn: Regulatory PTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Technical Development PTS'
+		dataType: int64
+		formatString: 0
+		lineageTag: 174319b2-432d-4da2-b7d4-d769e490db92
+		summarizeBy: sum
+		sourceColumn: Technical Development PTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Overall PTS'
+		dataType: int64
+		formatString: 0
+		lineageTag: f9b7bd17-220b-443f-9e9a-cf790c67fb8f
+		summarizeBy: sum
+		sourceColumn: Overall PTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Supply Flag'
+		dataType: string
+		lineageTag: 403aec93-a732-4f12-8080-bad9972bb2c8
+		summarizeBy: none
+		sourceColumn: Product Supply Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) SUNK COSTS 2023 and before'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8aba844d-a07f-46fe-86e2-7edab79a4568
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) SUNK COSTS 2023 and before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: 93d7cf23-bc7c-4dfc-89ef-80b0c8153609
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f17b281-bb78-471a-a9a7-640894147658
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: 52689eca-7cfa-4e85-9d41-e623b2a084cb
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: d6fbb7f9-0610-46cc-9a1a-6812845fb976
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: a5672577-ca4e-4a12-9331-d36039d2eeea
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: f5ef77e0-9b9b-4d0d-a3e3-efc71930c944
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: bf0a708b-684b-442d-b7eb-6724a44805be
+		summarizeBy: sum
+		sourceColumn: R&D Internal Costs (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D Internal Costs (TEUR)'
+		dataType: int64
+		formatString: 0
+		lineageTag: febf9a81-8477-43ac-9bd4-d03f15727445
+		summarizeBy: sum
+		sourceColumn: Total R&D Internal Costs (TEUR)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D Internal FTE(s)'
+		dataType: double
+		lineageTag: 143fd62d-e80c-4da3-8c66-ea616ba009d8
+		summarizeBy: sum
+		sourceColumn: Total R&D Internal FTE(s)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0064a699-d126-4136-84dc-f1e38e2f0b6d
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: ac0beea1-6ba5-4e92-ba82-2017f2225495
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: a3319e23-91d7-481d-bfdc-a12fa9378aa4
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: 26250d67-b7f4-44f3-8742-49379cd5fa62
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: da63b34f-cf28-4c49-aacc-27c482d59ec5
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5085dfe4-afcc-4412-9e4d-96e041b815f8
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fc6252b-e538-40a9-bc5a-2f49e1647dfb
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39aa81c0-7805-4bee-98a9-11cb0610ebe4
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D External Costs (Includes Clinical Costs) (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: af12bdc9-1eb6-4c34-98a0-01fe64af9f87
+		summarizeBy: sum
+		sourceColumn: "Total R&D External Costs (Includes Clinical Costs) (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before'
+		dataType: int64
+		formatString: 0
+		lineageTag: 06cbc128-bfc7-403c-bdbe-42687f411cc8
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03a0f4b2-483a-4eab-a091-4e83e9d1334f
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b5aaf4f-5f7c-4266-8d0b-4748bc665923
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: e209cc41-75c3-4844-a028-dc8637c047d0
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: d3066d34-22a8-418a-83d0-96a0bc8eaf18
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f0ade5f-17bc-4259-82a3-9f75af65f14a
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: 18d62101-b140-4b99-a40f-4e32becc0e4a
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b6ed5b0-2862-4760-9fa3-489fb32c2117
+		summarizeBy: sum
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D External Costs (Clinical Costs Only) (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: 381c4058-f9aa-447b-ab9f-d6148ad53b7d
+		summarizeBy: sum
+		sourceColumn: "Total R&D External Costs (Clinical Costs Only) (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: adaa1b17-8204-4c43-bfeb-1604461898ad
+		summarizeBy: sum
+		sourceColumn: "Marketing Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Other Operating Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: cc1bc7ae-0aec-48b6-9567-beb51a7090d8
+		summarizeBy: sum
+		sourceColumn: "Other Operating Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dep/Amort Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b4710d8-ff20-411c-b008-437e72add895
+		summarizeBy: sum
+		sourceColumn: "Dep/Amort Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Milestone Payments Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: 6eeb22dd-aaa9-4273-b7dd-a7736f866bed
+		summarizeBy: sum
+		sourceColumn: "Milestone Payments Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Resources Comments '
+		dataType: string
+		lineageTag: 8d3c93eb-b800-47fa-81fe-8135c1d96444
+		summarizeBy: none
+		sourceColumn: "Resources Comments "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last PM Modified Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ca3f326-8a6c-4357-94e4-99b3e067a476
+		summarizeBy: none
+		sourceColumn: Last PM Modified Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Overall Modified Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b9fb5db0-6e7e-4716-adce-a166aaed2dde
+		summarizeBy: none
+		sourceColumn: Last Overall Modified Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Other Markets'
+		dataType: string
+		lineageTag: 76705483-d1bb-4e9c-82f5-2a947fb7985d
+		summarizeBy: none
+		sourceColumn: Other Markets
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Region 2nd market'
+		dataType: string
+		lineageTag: 36c75f1a-a746-43cd-a168-0e23862164b3
+		summarizeBy: none
+		sourceColumn: Region 2nd market
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Regions Other markets'
+		dataType: string
+		lineageTag: f485eee0-6cb5-4b14-bd3e-e20ec1dc0286
+		summarizeBy: none
+		sourceColumn: Regions Other markets
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'EI&P Resource'
+		dataType: string
+		lineageTag: ae6e1fbd-8efb-413c-8da7-127a83474b31
+		summarizeBy: none
+		sourceColumn: EI&P Resource
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim R&D' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://bayergroup.sharepoint.com/sites/MarketingControlling/", [ApiVersion = 15]),
+				    #"Innova Portfolio Export Report 22-Aug-2025 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/" = Source{[Name="Innova Portfolio Export Report 22-Aug-2025.xlsx",#"Folder Path"="https://bayergroup.sharepoint.com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Innova Portfolio Export Report 22-Aug-2025 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"),
+				    #"R&D Export Report_Sheet" = #"Imported Excel Workbook"{[Item="R&D Export Report",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"R&D Export Report_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Project ID #", type text}, {"Project", type text}, {"Program ID #", type text}, {"Program", type text}, {"GCBU", type text}, {"Brand", type text}, {"Status", type text}, {"Project Cancellation Date", type any}, {"Cancellation Reason", type text}, {"R&D Project Classification", type text}, {"Estimated Size of Opportunity (Y3 Incr NS in Mio €)", type number}, {"Estimated Size of Opportunity (Y5 Incr NS in Mio €)", type number}, {"PLS (in Mio €)", type number}, {"1st Launch Market", type text}, {"LPPM Launch Date", type any}, {"1st Launch Market Schedule Date", type any}, {"2nd Launch Market", type text}, {"Region 1st market", type text}, {"Innovation Impact", type text}, {"Archetype", type text}, {"Project Scope", type text}, {"Strategic Fit", type text}, {"Swimlane", type text}, {"Category Segment", type text}, {"R&D Budget Group", type text}, {"R&D Management Group", type text}, {"Brand Classification", type text}, {"Dossier Type", type text}, {"Tracking Status", type text}, {"Executive Summary", type text}, {"Project Leader", type text}, {"Formulations", type text}, {"Description", type text}, {"Short Description", type text}, {"Project Status", type text}, {"Clinicals Required", type text}, {"Project Initiation Year", Int64.Type}, {"Project Creation Date", type datetime}, {"Sustainability Rating", type text}, {"Uniqueness (Advantage Outcome)", type text}, {"Ownability", type text}, {"Latest Achieved Key Milestone", type text}, {"Draft", type datetime}, {"Scoping", type any}, {"Feasibility Contract", type any}, {"Development Contract", type any}, {"GSC", type any}, {"Small Scale", type any}, {"Large Scale", type any}, {"Submission", type any}, {"Launch Contract", type any}, {"1st Launch", type any}, {"2nd Launch", type any}, {"End", type datetime}, {"Project Duration – Development Contract to 1st Launch (in months)", Int64.Type}, {"Development Duration – Development Contract to Submission (in months)", Int64.Type}, {"Delay Reason", type text}, {"Project History", type text}, {"Development Type", type text}, {"Development Sites", type text}, {"Production Sites", type text}, {"Clinical Medical PTS", Int64.Type}, {"Regulatory PTS", Int64.Type}, {"Technical Development PTS", Int64.Type}, {"Overall PTS", Int64.Type}, {"Product Supply Flag", type text}, {"R&D Internal Costs (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D Internal Costs (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D Internal Costs (TEUR) 2025", Int64.Type}, {"R&D Internal Costs (TEUR) 2026", Int64.Type}, {"R&D Internal Costs (TEUR) 2027", Int64.Type}, {"R&D Internal Costs (TEUR) 2028", Int64.Type}, {"R&D Internal Costs (TEUR) 2029", Int64.Type}, {"R&D Internal Costs (TEUR) 2030+", Int64.Type}, {"Total R&D Internal Costs (TEUR)", Int64.Type}, {"Total R&D Internal FTE(s)", type number}, {"R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2025", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2026", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2027", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2028", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2029", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2030+", Int64.Type}, {"Total R&D External Costs (Includes Clinical Costs) (TEUR) ", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2025", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2026", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2027", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2028", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2029", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2030+", Int64.Type}, {"Total R&D External Costs (Clinical Costs Only) (TEUR) ", Int64.Type}, {"Marketing Costs Total (TEUR) ", Int64.Type}, {"Other Operating Costs Total (TEUR) ", Int64.Type}, {"Dep/Amort Costs Total (TEUR) ", Int64.Type}, {"Milestone Payments Costs Total (TEUR) ", Int64.Type}, {"Resources Comments ", type text}, {"Last PM Modified Date", type datetime}, {"Last Overall Modified Date", type datetime}, {"Other Markets", type text}, {"Region 2nd market", type text}, {"Regions Other markets", type text}, {"EI&P Resource", type text}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Changed Type", {"Project ID #"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

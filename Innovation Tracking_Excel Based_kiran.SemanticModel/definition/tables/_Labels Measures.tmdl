@@ -1,0 +1,77 @@
+table '_Labels Measures'
+	lineageTag: 5969bb55-9e3a-4f03-8d5c-e1a9dd1d06ea
+
+	measure 'From Label' = "From"
+		lineageTag: 726b3236-e5e4-4b47-8a23-d36f804978aa
+
+	measure 'To Label' = "To"
+		lineageTag: a36c601f-861b-4898-9e75-bf68bf5c9305
+
+	measure 'Launch Window (To)' = ```
+			
+			VAR _SelYM   = SELECTEDVALUE('Dim Date'[Year Month])
+			VAR _MaxDate =
+			    IF(
+			        NOT ISBLANK(_SelYM),
+			        CALCULATE( MAX('Dim Date'[Date]), ALL('Dim Date'), 'Dim Date'[Year Month] = _SelYM ),
+			        [Selected Max Date]
+			    )
+			RETURN FORMAT(EOMONTH(_MaxDate, 0), "dd MMM yyyy")
+			
+			```
+		lineageTag: 2d5e6026-d806-4d3e-8f9f-91da3835c395
+
+	measure 'Period Label' = SELECTEDVALUE('Period Filter'[Desc],"Past 12 Months")
+		lineageTag: db3fc53b-406f-46d0-a6e1-6b2dc2ea29e7
+
+	measure 'Geography Label' = "Geography"
+		lineageTag: f05e920b-05a2-4539-b5a6-f0739d5827ec
+
+	measure 'Category Label' = "Category"
+		lineageTag: d9819efc-e77c-41bc-8f3f-eb0362ca5e01
+
+	measure 'Brand Label' = "Brand"
+		lineageTag: a4c674e5-ee48-4327-817e-397d9446b5d7
+
+	measure 'NPD Name + Brand label' = "NPD Name + Brand"
+		lineageTag: ea03edd2-a21a-4c2a-a728-bf1f17916400
+
+	measure 'LPPM innovation label' = "LPPM Innovation Type"
+		lineageTag: fd69a15f-d8cf-4d12-9000-d5cf597c2409
+
+	measure 'Internal label' = " | Strictly for internal use only |"
+		lineageTag: 12025364-2321-428b-a001-1ba84503e4b3
+
+	measure 'dummy label' = 0
+		formatString: 0
+		lineageTag: 0e899bf8-a769-487d-b8c5-9714e11c7f13
+
+	measure 'npd with BPC' = SELECTEDVALUE('FACT LPPM'[Pipeline Status]) & " NPDs with New Product Development"
+		lineageTag: 9f071a46-1399-4134-8251-01c5baa8210b
+
+	measure 'npd with NPD label' = SELECTEDVALUE('FACT LPPM'[Pipeline Status]) & " NPDs with Existing Product Development"
+		lineageTag: fe8edcb7-72a5-49e6-a9c8-98ed3798a9c1
+
+	measure 'npd with others' = SELECTEDVALUE('FACT LPPM'[Pipeline Status]) & " NPDs with BPCs,Claims,Design,Rx to OTC"
+		lineageTag: fdb7e018-72c2-4fea-b6fa-e3ea07fd0fc2
+
+	measure 'L_Initiative sucess' = "Initiative Sucess"
+		lineageTag: e520b3d9-24d1-4747-ba5b-24c387791618
+
+	column Column
+		formatString: 0
+		lineageTag: 73f78a36-de40-4d17-b9c6-d95e292e95f4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '_Labels Measures' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = cad80f332a094394a8b70a50ade94415
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

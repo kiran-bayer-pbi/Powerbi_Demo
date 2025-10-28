@@ -1,0 +1,112 @@
+table 'Dim NPD'
+	lineageTag: 1979ef88-61f0-4245-8ca1-12c4415f8d7a
+
+	column Cannibalization
+		dataType: string
+		lineageTag: 1542df13-c310-4f40-90dc-f8997963bb0d
+		summarizeBy: none
+		sourceColumn: Cannibalization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Income Statement (P&L).'
+		dataType: string
+		lineageTag: 17e6c978-4c3e-47ed-958c-8d4af88fa93e
+		summarizeBy: none
+		sourceColumn: Income Statement (P&L).
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (NPD)'
+		dataType: string
+		lineageTag: 8808cdbb-4f01-45ec-9f63-e93ce2b10215
+		summarizeBy: none
+		sourceColumn: Brand Name (NPD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.1'
+		dataType: string
+		lineageTag: 618d91e2-d679-41f0-98fa-622ed8d35127
+		summarizeBy: none
+		sourceColumn: NPD Lvl.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.2'
+		dataType: string
+		lineageTag: 95f57d03-bca4-4602-8c7e-53a1c87cf61f
+		summarizeBy: none
+		sourceColumn: NPD Lvl.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: 7b9463d8-940c-48e3-85a5-a03d2b44a077
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Status'
+		dataType: string
+		lineageTag: 43ab7293-b0e7-40bb-9f89-770d14c6304d
+		summarizeBy: none
+		sourceColumn: NPD Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Process Step'
+		dataType: string
+		lineageTag: f02d6149-5bb4-4109-9f6c-0fba7b53a5f0
+		summarizeBy: none
+		sourceColumn: NPD Process Step
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Developement Typ'
+		dataType: string
+		lineageTag: 0e3c7c9f-f3f0-444a-b592-f0257844a269
+		summarizeBy: none
+		sourceColumn: NPD Developement Typ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Program'
+		dataType: string
+		lineageTag: 02c4ba29-8f74-40c4-831d-66af124b5b64
+		summarizeBy: none
+		sourceColumn: NPD Program
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD R&D Proj.Class'
+		dataType: string
+		lineageTag: 6111c012-b8f8-400e-85bb-bcfdc21a6897
+		summarizeBy: none
+		sourceColumn: NPD R&D Proj.Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD first Launch month/year'
+		dataType: string
+		lineageTag: 13e01bdd-7284-45fb-8482-f3d75c92a842
+		summarizeBy: none
+		sourceColumn: NPD first Launch month/year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim NPD' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Cannibalization", "Income Statement (P&L).", "Brand Name (NPD)", "NPD Lvl.1", "NPD Lvl.2", "NPD Name", "NPD Status", "NPD Process Step", "NPD Developement Typ", "NPD Program", "NPD R&D Proj.Class", "NPD first Launch month/year"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

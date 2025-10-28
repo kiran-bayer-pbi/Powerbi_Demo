@@ -1,0 +1,60 @@
+table 'Dim Geography'
+	lineageTag: e03aeae5-9351-4317-8045-07845e67aee3
+
+	column 'BSV Lvl 2'
+		dataType: string
+		lineageTag: 479f07ea-8a38-4d29-9498-e533df887459
+		summarizeBy: none
+		sourceColumn: BSV Lvl 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 3'
+		dataType: string
+		lineageTag: 69c373bc-d43c-4bff-ab63-a86dc371af75
+		summarizeBy: none
+		sourceColumn: BSV Lvl 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 4'
+		dataType: string
+		lineageTag: 51aeceb4-d2fc-4e8e-8278-ed6dbe2f7702
+		summarizeBy: none
+		sourceColumn: BSV Lvl 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 5'
+		dataType: string
+		lineageTag: dbd8c9e7-69f5-48e6-beae-91e718b3053e
+		summarizeBy: none
+		sourceColumn: BSV Lvl 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 6'
+		dataType: string
+		lineageTag: 37ffa643-170f-4e15-a04b-0b5622eb77cd
+		summarizeBy: none
+		sourceColumn: BSV Lvl 6
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Geography' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5", "BSV Lvl 6"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each ([BSV Lvl 3] <> "Discontinued Bus.")),
+				    #"Sorted Rows" = Table.Sort(#"Filtered Rows",{{"BSV Lvl 6", Order.Ascending}}),
+				    #"Removed Duplicates1" = Table.Distinct(#"Sorted Rows", {"BSV Lvl 6"})
+				in
+				    #"Removed Duplicates1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

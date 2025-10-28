@@ -1,0 +1,394 @@
+table '_Measures Table'
+	lineageTag: d25ab305-25c7-4838-87ae-f37d5fb25b4c
+
+	measure 'Donut SVG' =
+			
+			VAR _ratio = DIVIDE([Initiative Success %], [Target], 0)
+			VAR Angle = _ratio * 360
+			VAR Radius = 50
+			VAR StrokeWidth = 10
+			VAR Center = 60
+			VAR Circumference = 2 * PI() * Radius
+			VAR Offset = Circumference * (1 - _ratio)
+			VAR Color =
+			SWITCH(
+			TRUE(),
+			_ratio <= 0.5, "#FC2F00", -- Red
+			_ratio <= 0.8, "#FFB84C", -- Orange/Yellow
+			"#6BCF53" -- Green
+			)
+			VAR TrackColor = IF(_ratio > 1, "#92D71D", "#e0e0e0")
+			VAR TextColor = "#666666"
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"
+			<svg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'>
+			<circle cx='" & Center & "' cy='" & Center & "' r='" & Radius & "'
+			stroke='" & TrackColor & "' stroke-width='" & StrokeWidth & "' fill='none'/>
+			<circle cx='" & Center & "' cy='" & Center & "' r='" & Radius & "'
+			stroke='" & Color & "' stroke-width='" & StrokeWidth & "' fill='none'
+			stroke-dasharray='" & Circumference & "'
+			stroke-dashoffset='" & Circumference & "'
+			transform='rotate(-90 " & Center & " " & Center & ")'
+			style='transition: stroke-dashoffset 1s ease-out; stroke-linecap: round; animation:
+			draw 1s forwards;'/>
+			<text x='" & Center & "' y='" & Center+5 & "' font-size='20' font-family='Segoe UI,
+			sans-serif' font-weight='600' text-anchor='middle' fill='" & TextColor & "'>"
+			& FORMAT(_ratio, "0%") & "</text>
+			<style>
+			@keyframes draw {
+			to {
+			stroke-dashoffset: " & Offset & ";
+			}
+			}
+			</style>
+			</svg>
+			"
+		lineageTag: 9c93a19c-cd61-4615-9ed1-05ad8ede514e
+
+	measure Target = 1
+		formatString: 0
+		lineageTag: 4be49b70-0323-4d7d-8439-695695478f77
+
+	measure 'LPPM Link' = "https://synaps-apps.intranet.cnb/lppm/#/lppm/"&SELECTEDVALUE('Fact Table Snowflake'[LPPM_NUMBER])&"/general"
+		lineageTag: 9a64b6a7-3444-47a7-9a3d-0a78134deaf7
+		dataCategory: WebUrl
+
+	measure 'LPPM @BUD CY' =
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End = [Selected Max Date]
+			RETURN
+			CALCULATE([B_LPPM @BUD CY], FILTER(
+			            ALL('Dim Date'),
+			            'Dim Date'[Date] >= _Start &&
+			            'Dim Date'[Date] <= _End
+			        ))
+		formatString: #,0
+		lineageTag: 3510b00c-b269-4960-8afa-49ba7ca965bb
+
+	measure 'Initiative Success %' = DIVIDE([Act @BUD CY (LaunchWindow)],[LPPM @BUD CY (LaunchWindow)],0)
+		formatString: 0%;-0%;0%
+		lineageTag: e76aa905-bcdc-4f70-be20-ab176d671fae
+
+	measure 'Estimated LPPM Launch' = FORMAT(HASONEVALUE('Fact Table Snowflake'[LAUNCH_DATE]),"MM-YYYY")
+		lineageTag: 3174cbf3-22e6-4a0f-8bfd-078a470674d9
+
+	measure 'BUD @BUD CY' =
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End = [Selected Max Date]
+			RETURN
+			CALCULATE([B_BUD @BUD CY], FILTER(
+			            ALL('Dim Date'),
+			            'Dim Date'[Date] >= _Start &&
+			            'Dim Date'[Date] <= _End
+			        ))
+		lineageTag: 5aabe15c-b85e-441e-91a2-9ac4192f476c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'B_LPPM @BUD CY' = DIVIDE(SUM('Fact Table Snowflake'[LPPM_VALUE]),SUM('Value Table'[Value]),0)
+		formatString: #,0
+		lineageTag: d527534d-79da-42ae-9b06-726103d4da7f
+
+	measure 'B_BUD @BUD CY' = DIVIDE(SUM('Fact Table Snowflake'[BUDGET_VALUE]),SUM('Value Table'[Value]),0)
+		formatString: #,0
+		lineageTag: 49c08d87-62d1-4bac-a67b-8fab069c4e83
+
+	measure 'B_ACT @BUD CY' = DIVIDE(SUM('Fact Table Snowflake'[ACTUALS]),SUM('Value Table'[Value]),0)
+		formatString: #,0
+		lineageTag: e50d5f71-1d98-4819-8ae3-17f8f7e7a715
+
+	measure 'ACT @BUD CY' =
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End = [Selected Max Date]
+			RETURN
+			CALCULATE([B_ACT @BUD CY], FILTER(
+			            ALL('Dim Date'),
+			            'Dim Date'[Date] >= _Start &&
+			            'Dim Date'[Date] <= _End
+			        ))
+		formatString: #,0
+		lineageTag: c673decf-c044-490b-b764-1c4c4f929bc3
+
+	measure 'User Name' = ```
+			
+			VAR FullUPN = USERPRINCIPALNAME()
+			VAR AtPosition = FIND(".", FullUPN, 1, LEN(FullUPN))
+			VAR UserPart = LEFT(FullUPN, AtPosition - 1)
+			VAR FirstChar = UPPER(LEFT(UserPart,1))
+			VAR RemainingChars = MID(UserPart, 2, LEN(UserPart))
+			RETURN
+			FirstChar & RemainingChars
+			
+			```
+		lineageTag: e5c5690c-7152-4363-bf00-44e6b8eed3f5
+
+	measure 'Hello label' = "Hello,"
+		lineageTag: 386a7448-f4b6-4648-ac23-fcd6485187a5
+
+	measure 'Welcome msg' = "Lets take a look at Initiative Success %"
+		lineageTag: a76df2ec-7508-40ff-b6d5-d8257b87bf1c
+
+	measure datediff = DATEDIFF(DATE(2021,09,26),DATE(2020,02,17),DAY)
+		formatString: 0
+		lineageTag: 3f1d92f1-0ae9-4cea-8466-4599fb8b8e11
+
+	measure 'Initiative Sucess label' = ```
+			"Initiative Success: " & SELECTEDVALUE('Period Filter'[Desc]) & " Actuals vs LPPM Net Sales, of LPPMs launched within the last " & [SelectedYears] & " Years." 
+			```
+		lineageTag: b5eedbd1-1f17-4915-a3da-b3e06b18acf6
+
+	measure 'Last Refresh Label' = "Last Refreshed"
+		lineageTag: 48a25204-cf09-411c-99cf-b4b7fbb0b399
+
+	measure Refresh = MAX('Dim Date'[Date])
+		formatString: General Date
+		lineageTag: 861501f1-14d2-4919-9157-20031780961e
+
+	measure SelectedYears = SELECTEDVALUE(YearParameter[Years], 2)   // default 2 years
+		formatString: 0
+		lineageTag: 158fa979-6413-4d52-ae9c-51d02438e1f7
+
+	measure AnchorMaxDate = ```
+			
+			VAR _SelYM = SELECTEDVALUE('Dim Date'[Year Month])
+			RETURN
+			IF(
+			    NOT ISBLANK(_SelYM),
+			    CALCULATE(MAX('Dim Date'[Date]), ALL('Dim Date'), 'Dim Date'[Year Month] = _SelYM),
+			    [Selected Max Date]
+			)
+			
+			
+			
+			```
+		formatString: General Date
+		lineageTag: 5fc32683-4b7e-4a65-9830-783ea43abf16
+
+	measure AnchorStartDate =
+			
+			VAR _N = [SelectedYears]
+			VAR _Max = [AnchorMaxDate]
+			RETURN EOMONTH(_Max, -12 * _N) + 1   // first day after end-of-month N years back
+		formatString: General Date
+		lineageTag: 090f259d-87e5-4e5f-8bcb-89234fed8d4b
+
+	measure 'LPPM @BUD CY (LaunchWindow)' = ```
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End   = [Selected Max Date]
+			
+			VAR _Max   = [AnchorMaxDate]            // max date from Year Month slicer
+			VAR _Years = [SelectedYears]            // user-chosen number of years
+			VAR _From  = EDATE(_Max, -12 * _Years)  // roll back N years
+			
+			RETURN
+			CALCULATE(
+			    [B_LPPM @BUD CY],
+			    FILTER(
+			        ALL('Dim Date'),
+			        'Dim Date'[Date] >= _Start &&
+			        'Dim Date'[Date] <= _End
+			    ),
+			    KEEPFILTERS(
+			        'Fact Table Snowflake'[LAUNCH_DATE] >= _From &&
+			        'Fact Table Snowflake'[LAUNCH_DATE] <= _Max
+			    )
+			)
+			
+			```
+		formatString: #,0.0
+		lineageTag: 78818605-62db-428f-a669-76da5bf27d67
+
+	measure 'Launch Window (From)' = ```
+			
+			VAR _Years   = [SelectedYears]
+			VAR _SelYM   = SELECTEDVALUE('Dim Date'[Year Month])
+			VAR _MaxDate =
+			    IF(
+			        NOT ISBLANK(_SelYM),
+			        CALCULATE( MAX('Dim Date'[Date]), ALL('Dim Date'), 'Dim Date'[Year Month] = _SelYM ),
+			        [Selected Max Date]
+			    )
+			VAR _EndDate   = EOMONTH(_MaxDate, 0)
+			VAR _StartDate = EOMONTH(_EndDate, -12 * _Years) + 1
+			RETURN FORMAT(_StartDate, "dd MMM yyyy")
+			
+			```
+		lineageTag: d31306c9-bcfc-4f8a-a440-68d4b0ae5f5b
+
+	measure 'LPPM Launch date label' = "LPPM Launch Range (in Years)"
+		lineageTag: f4596887-f4ff-41a6-9e1f-73a7fcf26ce5
+
+	measure 'Act @BUD CY (LaunchWindow)' = ```
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End   = [Selected Max Date]
+			
+			VAR _Max   = [AnchorMaxDate]            // max date from Year Month slicer
+			VAR _Years = [SelectedYears]            // user-chosen number of years
+			VAR _From  = EDATE(_Max, -12 * _Years)  // roll back N years
+			
+			RETURN
+			CALCULATE(
+			    [B_ACT @BUD CY],
+			    FILTER(
+			        ALL('Dim Date'),
+			        'Dim Date'[Date] >= _Start &&
+			        'Dim Date'[Date] <= _End
+			    ),
+			    KEEPFILTERS(
+			        'Fact Table Snowflake'[LAUNCH_DATE] >= _From &&
+			        'Fact Table Snowflake'[LAUNCH_DATE] <= _Max
+			    )
+			)
+			
+			```
+		formatString: #,0.0
+		lineageTag: 12331de8-c6d6-4743-8494-324c37ad7fb8
+
+	measure 'Bud @BUD CY (LaunchWindow)' = ```
+			
+			VAR _Start = [Selected Start Date]
+			VAR _End   = [Selected Max Date]
+			
+			VAR _Max   = [AnchorMaxDate]            // max date from Year Month slicer
+			VAR _Years = [SelectedYears]            // user-chosen number of years
+			VAR _From  = EDATE(_Max, -12 * _Years)  // roll back N years
+			
+			RETURN
+			CALCULATE(
+			    [B_BUD @BUD CY],
+			    FILTER(
+			        ALL('Dim Date'),
+			        'Dim Date'[Date] >= _Start &&
+			        'Dim Date'[Date] <= _End
+			    ),
+			    KEEPFILTERS(
+			        'Fact Table Snowflake'[LAUNCH_DATE] >= _From &&
+			        'Fact Table Snowflake'[LAUNCH_DATE] <= _Max
+			    )
+			)
+			
+			```
+		formatString: 0.0
+		lineageTag: cee22c74-3a07-4265-bdcb-be8634b14068
+
+	measure 'B_LPPM @BUD CY | Period Window' = ```
+			
+			CALCULATE (
+			    [B_LPPM @BUD CY],
+			    KEEPFILTERS ( DATESBETWEEN ( 'Dim Date'[Date], [Selected Start Date], [Selected Max Date] ) )
+			)
+			
+			```
+		lineageTag: f7a90c92-4f2d-4fe6-a5cf-b2fc799ebb92
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'B_BUD @BUD CY | Period Window' = ```
+			
+			CALCULATE (
+			    [B_BUD @BUD CY],
+			    KEEPFILTERS ( DATESBETWEEN ( 'Dim Date'[Date], [Selected Start Date], [Selected Max Date] ) )
+			)
+			
+			```
+		lineageTag: db9e475b-9c78-4754-8a9b-e23e75c87a1a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Actuals| Period Window' = ```
+			
+			CALCULATE (
+			    [B_ACT @BUD CY],
+			    KEEPFILTERS ( DATESBETWEEN ( 'Dim Date'[Date], [Selected Start Date], [Selected Max Date] ) )
+			)
+			
+			```
+		formatString: #,0
+		lineageTag: 87634029-c2a7-4869-a025-b36c8b0e5dc2
+
+	measure 'NPD without BPC claims' = CALCULATE([NPD Count],'FACT LPPM'[NPD R&D Proj.Class]= "New Product Development",'FACT LPPM'[NPD Status]<>"NPD Cancelled")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: d17f4595-ba55-4dd3-9317-8a0e2940f580
+
+	measure 'R&D External Cost' = CALCULATE(SUM('Dim R&D'[R&D External Costs (Clinical Costs Only) (TEUR) 2025]),'Dim NPD'[NPD Status]<> "NPD Cancelled")
+		formatString: 0
+		lineageTag: cf072114-f197-458c-a47d-99c51aea7501
+
+	measure 'pre dc NPD' = CALCULATE(COUNTA('FACT LPPM'[NPD Lvl.2]),'FACT LPPM'[NPD Status]<>"NPD Cancelled",'FACT LPPM'[Pipeline Status]="b) Pre-DC Pipeline")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: ab13a050-d5a4-418d-8490-9d82753a2b86
+
+	measure 'NPD Draft cnt' = CALCULATE([NPD Count],'FACT LPPM'[Pipeline Status]="Draft")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: b876f30a-b70c-48cd-8bf3-dc4baae490cf
+
+	measure 'NPD Post Launched' = CALCULATE([NPD Count],'FACT LPPM'[Pipeline Status]="Post Launched")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: cce4e675-8d05-4b6d-8e62-1da519f692ea
+
+	measure 'NPD Post DC pipeline cnt' = CALCULATE([NPD Count],'FACT LPPM'[Pipeline Status]="Post-DC Pipeline")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: c9e53182-c401-4f3f-ba06-d3e40e1be360
+
+	measure 'NPD pre DC cnt' = CALCULATE([NPD Count],'FACT LPPM'[Pipeline Status]="Pre-DC Pipeline")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: 5b07c6f7-3450-4bfd-ab81-b99d8ea9e534
+
+	measure 'NPD with NPC' = CALCULATE([NPD Count],'FACT LPPM'[NPD R&D Proj.Class] = "New Product Development",'FACT LPPM'[NPD Status]<>"NPD Cancelled")
+		formatString: 0
+		lineageTag: b526aba9-d60a-4eb3-87d5-c4767abc263c
+
+	measure 'NPD without BPC claims2' = CALCULATE([NPD Count],'FACT LPPM'[NPD R&D Proj.Class] IN { "Business Protection & Compliance","Claims","Rx-to-OTC Switch","Design & Packaging"},'FACT LPPM'[NPD Status]<>"NPD Cancelled")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: 98c14631-68a0-442f-91d4-91d83095ffa2
+
+	measure 'NPD with EPD CNT' = CALCULATE([NPD Count],'FACT LPPM'[NPD R&D Proj.Class]= "Existing Product Development",'FACT LPPM'[NPD Status]<>"NPD Cancelled")
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: 1fefc093-509d-4656-80a5-220f22cc3cec
+
+	measure 'R&D 2025 Cost' = SUM('Fact R&D'[R&D External Costs (Includes Clinical Costs) (TEUR) 2025])*1000
+		formatString: 0.0
+		displayFolder: Cockpit
+		lineageTag: 9aaabc8d-66c4-44bb-ba9b-1ba1c2d6a399
+
+	measure 'incre Net Sales' = SUM('Fact Innovation 360'[Value])*1000
+		formatString: 0.0
+		displayFolder: Cockpit
+		lineageTag: 92521e2e-8202-49a8-94b5-0fa2f0db2ad8
+
+	measure 'LPPM Count not launched' = CALCULATE(DISTINCTCOUNTNOBLANK('FACT LPPM'[LPPM]),NOT 'Dim LPPM'[LPPM Status] IN {"Launched","NPD Active","NPD created","NPD Completed"})
+		formatString: 0
+		displayFolder: Cockpit
+		lineageTag: 15c2caa1-51ee-411f-9f2d-089a26750bf2
+
+	column Column
+		formatString: 0
+		lineageTag: 32ccfc9e-7adf-47ad-b747-1d4431882fa7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition '_Measures Table' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 6d3dcec7af534cdf982ff645c6600349
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

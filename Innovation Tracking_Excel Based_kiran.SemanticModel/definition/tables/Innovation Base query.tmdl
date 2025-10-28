@@ -1,0 +1,752 @@
+table 'Innovation Base query'
+	lineageTag: 17c449a3-dd42-4f6b-90ec-6bce58f87744
+
+	column Measure
+		dataType: string
+		lineageTag: b5baddcb-5352-40b4-b0c8-fe41f9a08058
+		summarizeBy: none
+		sourceColumn: Measure
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cannibalization
+		dataType: string
+		lineageTag: f210f335-643d-420b-aa5a-d7bcebfd5121
+		summarizeBy: none
+		sourceColumn: Cannibalization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Income Statement (P&L).'
+		dataType: string
+		lineageTag: dd7ab47a-c853-4792-b4e1-15fc8388c231
+		summarizeBy: none
+		sourceColumn: Income Statement (P&L).
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 1'
+		dataType: string
+		lineageTag: 13510286-4f75-49ca-8272-16603b3ebbce
+		summarizeBy: none
+		sourceColumn: BSV Lvl 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 2'
+		dataType: string
+		lineageTag: a926ffcd-8f6e-47cf-bc69-c2cf807ce279
+		summarizeBy: none
+		sourceColumn: BSV Lvl 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 3'
+		dataType: string
+		lineageTag: ba5a7254-fcb0-4a30-93ab-27aa7361c7ed
+		summarizeBy: none
+		sourceColumn: BSV Lvl 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 4'
+		dataType: string
+		lineageTag: 324cfe5a-4f6b-4c1e-99e1-82e411f106b1
+		summarizeBy: none
+		sourceColumn: BSV Lvl 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 5'
+		dataType: string
+		lineageTag: f6f50169-7914-4728-b408-736e58f0ccaf
+		summarizeBy: none
+		sourceColumn: BSV Lvl 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BSV Lvl 6'
+		dataType: string
+		lineageTag: 8e1ae300-f0b6-4d0e-b3dd-3d3454fdbd5c
+		summarizeBy: none
+		sourceColumn: BSV Lvl 6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reporting Unit'
+		dataType: string
+		lineageTag: f1c1d6a2-35b8-43d1-b01a-ddd1947ffcb2
+		summarizeBy: none
+		sourceColumn: Reporting Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (NPD)'
+		dataType: string
+		lineageTag: 4318d790-5c0c-488c-aa43-921ddd714b8c
+		summarizeBy: none
+		sourceColumn: Brand Name (NPD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Brand Name (LPPM)'
+		dataType: string
+		lineageTag: 7c6e593b-3dc3-4459-9a26-99d604069a07
+		summarizeBy: none
+		sourceColumn: Brand Name (LPPM)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.1'
+		dataType: string
+		lineageTag: b1420dbb-f397-4aa1-a5de-43a7742f6d6b
+		summarizeBy: none
+		sourceColumn: NPD Lvl.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Lvl.2'
+		dataType: string
+		lineageTag: befe79d8-18a4-4df2-b283-6da5c7952419
+		summarizeBy: none
+		sourceColumn: NPD Lvl.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: c11855dd-809f-4d63-a915-c1d60dbb5e24
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Status'
+		dataType: string
+		lineageTag: 3428f870-5c8e-46db-9a0e-1d74466be957
+		summarizeBy: none
+		sourceColumn: NPD Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Process Step'
+		dataType: string
+		lineageTag: efddd59f-2d58-4882-b766-b1a4b3404eb1
+		summarizeBy: none
+		sourceColumn: NPD Process Step
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Developement Typ'
+		dataType: string
+		lineageTag: 675c21b1-5b91-4608-9161-3c666655b9ff
+		summarizeBy: none
+		sourceColumn: NPD Developement Typ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Program'
+		dataType: string
+		lineageTag: 4ea26a54-9fd4-4972-bc49-bc7d4d685ce6
+		summarizeBy: none
+		sourceColumn: NPD Program
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD R&D Proj.Class'
+		dataType: string
+		lineageTag: 08e46e5b-5258-4482-b2d3-eaf6a050824a
+		summarizeBy: none
+		sourceColumn: NPD R&D Proj.Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM
+		dataType: string
+		lineageTag: 0b3b430f-7e39-4ba5-9f78-32c8a3b6f4d7
+		summarizeBy: none
+		sourceColumn: LPPM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Name'
+		dataType: string
+		lineageTag: 1ac858fc-1f80-49ff-a6e3-cfe92aab50f8
+		summarizeBy: none
+		sourceColumn: LPPM Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Innovation Type'
+		dataType: string
+		lineageTag: 46aeea12-8184-4099-80be-1f2c4cde8f2d
+		summarizeBy: none
+		sourceColumn: LPPM Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Lifespan'
+		dataType: string
+		lineageTag: 7a7f83b0-67c1-4d01-8c0d-cf5cec9f7d7d
+		summarizeBy: none
+		sourceColumn: LPPM Lifespan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Innovation Impact'
+		dataType: string
+		lineageTag: afdf31cb-b6a9-424d-9b87-2280b65dea5e
+		summarizeBy: none
+		sourceColumn: Innovation Impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dossier Type'
+		dataType: string
+		lineageTag: 580c276a-2a1d-40f9-b167-4dc5e29b8de0
+		summarizeBy: none
+		sourceColumn: Dossier Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Production Site'
+		dataType: string
+		lineageTag: 3e58ec04-7267-4ca7-8034-003be156b8d6
+		summarizeBy: none
+		sourceColumn: Production Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Formulation
+		dataType: string
+		lineageTag: ea15e78e-bdfd-4f55-8dc0-a41d4790549e
+		summarizeBy: none
+		sourceColumn: Formulation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Formulation Name'
+		dataType: string
+		lineageTag: 01e3408a-7ceb-4880-9bed-61060781f8c7
+		summarizeBy: none
+		sourceColumn: Formulation Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Galenical Form'
+		dataType: string
+		lineageTag: 8af4ece1-4ddb-4653-a46e-bffeeca36bad
+		summarizeBy: none
+		sourceColumn: Galenical Form
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pack Size'
+		dataType: string
+		lineageTag: 72570f97-5559-466f-b0f6-b679034c488c
+		summarizeBy: none
+		sourceColumn: Pack Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Straco Flag'
+		dataType: string
+		lineageTag: 78966b1f-6a7a-46a6-8419-41e4fc905728
+		summarizeBy: none
+		sourceColumn: Straco Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD first Launch month/year'
+		dataType: string
+		lineageTag: e18e2321-5e92-4018-a516-9945ab63e7e7
+		summarizeBy: none
+		sourceColumn: NPD first Launch month/year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch year'
+		dataType: string
+		lineageTag: f40b2bf6-ed3f-41dd-ac9e-73712839b522
+		summarizeBy: none
+		sourceColumn: Launch year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Launch month/year'
+		dataType: string
+		lineageTag: 086ca42a-8399-4ddf-aed0-f59a27035db7
+		summarizeBy: none
+		sourceColumn: Launch month/year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Status'
+		dataType: string
+		lineageTag: 8148c9c1-588b-403c-94bb-57436546e0c9
+		summarizeBy: none
+		sourceColumn: LPPM Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Enterprise Classification (LPPM)'
+		dataType: string
+		lineageTag: 73eb5fe7-93d4-40b7-8289-79bb48351815
+		summarizeBy: none
+		sourceColumn: Enterprise Classification (LPPM)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Currency Type'
+		dataType: string
+		lineageTag: f666cc4b-e62c-4fcd-bfcb-68a35da0d29d
+		summarizeBy: none
+		sourceColumn: Currency Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal year'
+		dataType: string
+		lineageTag: 4cf2f00f-6f77-4432-9942-aa93bbce48e4
+		summarizeBy: none
+		sourceColumn: Fiscal year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 1000
+		dataType: int64
+		formatString: 0
+		lineageTag: 12f0652b-a435-4fe4-98d6-a8bb8d00d9d6
+		summarizeBy: sum
+		sourceColumn: 1000
+
+		annotation SummarizationSetBy = Automatic
+
+	column 2013
+		dataType: double
+		lineageTag: d230a0bb-0a45-430b-88b9-fc955036821c
+		summarizeBy: sum
+		sourceColumn: 2013
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2014
+		dataType: double
+		lineageTag: 7fc9988e-4148-4736-9db6-454bc5267195
+		summarizeBy: sum
+		sourceColumn: 2014
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2015
+		dataType: double
+		lineageTag: b9c794db-be21-4ccc-b4c3-ce9ca4cc85bd
+		summarizeBy: sum
+		sourceColumn: 2015
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2016
+		dataType: double
+		lineageTag: e80146a1-0086-4a2f-a418-ead305ab6a15
+		summarizeBy: sum
+		sourceColumn: 2016
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2017
+		dataType: double
+		lineageTag: 9b3a30a4-3ee1-41b4-a7e7-3656234cd07c
+		summarizeBy: sum
+		sourceColumn: 2017
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2018
+		dataType: double
+		lineageTag: 8fd19cd0-b990-4ba0-9d91-2b5b778588e4
+		summarizeBy: sum
+		sourceColumn: 2018
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2019
+		dataType: double
+		lineageTag: 2e2fb1a0-54ae-4d08-80e9-aa6669781f6d
+		summarizeBy: sum
+		sourceColumn: 2019
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2020
+		dataType: double
+		lineageTag: f7cdbe6c-93df-457e-bdce-f90ee4bcbb7c
+		summarizeBy: sum
+		sourceColumn: 2020
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2021
+		dataType: double
+		lineageTag: b4ec577c-2fbe-4f38-adfd-4d5ea538aa66
+		summarizeBy: sum
+		sourceColumn: 2021
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2022
+		dataType: double
+		lineageTag: 129d4073-7732-4d5a-81f6-6d511377f32e
+		summarizeBy: sum
+		sourceColumn: 2022
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2023
+		dataType: double
+		lineageTag: fcf6173d-00d6-49f5-a533-2d361ce06897
+		summarizeBy: sum
+		sourceColumn: 2023
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2024
+		dataType: double
+		lineageTag: f651088d-80eb-43ad-b2f8-df8d7c251382
+		summarizeBy: sum
+		sourceColumn: 2024
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2025
+		dataType: double
+		lineageTag: 90543b89-852e-4ab0-aec4-332b99ff8097
+		summarizeBy: sum
+		sourceColumn: 2025
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2026
+		dataType: double
+		lineageTag: 0ed3b55a-01ad-4f8f-a547-1beec6dd01f4
+		summarizeBy: sum
+		sourceColumn: 2026
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2027
+		dataType: double
+		lineageTag: 499e3a4d-9a07-4f70-8a30-2d7f2fa41400
+		summarizeBy: sum
+		sourceColumn: 2027
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2028
+		dataType: double
+		lineageTag: 071680d6-9f55-4da4-b3d4-d888dd0af595
+		summarizeBy: sum
+		sourceColumn: 2028
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2029
+		dataType: double
+		lineageTag: f12dab0c-c53c-4f56-a815-60543d9a7396
+		summarizeBy: sum
+		sourceColumn: 2029
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2030
+		dataType: double
+		lineageTag: 2ba7cbb2-6dbb-471a-9636-a71710065f82
+		summarizeBy: sum
+		sourceColumn: 2030
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2031
+		dataType: double
+		lineageTag: 1e32a566-ade6-4c0a-865e-bff1ea92d81c
+		summarizeBy: sum
+		sourceColumn: 2031
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2032
+		dataType: double
+		lineageTag: dcf9548a-c89e-4089-a862-33098237d4d5
+		summarizeBy: sum
+		sourceColumn: 2032
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2033
+		dataType: double
+		lineageTag: a722b578-4005-41b7-b879-e0ec242a3946
+		summarizeBy: sum
+		sourceColumn: 2033
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2034
+		dataType: double
+		lineageTag: 9233685c-aadc-4e8b-a7a5-aa222d21d34e
+		summarizeBy: sum
+		sourceColumn: 2034
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2035
+		dataType: double
+		lineageTag: 9d14cd0e-1d6e-4745-b364-3323d722094c
+		summarizeBy: sum
+		sourceColumn: 2035
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2036
+		dataType: double
+		lineageTag: 9b7affca-15b0-454d-a27a-04900312b12f
+		summarizeBy: sum
+		sourceColumn: 2036
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2037
+		dataType: double
+		lineageTag: 6c8b4593-e8e7-4ef8-a3ad-ec3e7e062743
+		summarizeBy: sum
+		sourceColumn: 2037
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2038
+		dataType: double
+		lineageTag: f0cd15ba-00b7-4d22-9f92-285bd6ec0b04
+		summarizeBy: sum
+		sourceColumn: 2038
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2039
+		dataType: double
+		lineageTag: 57fa3875-4095-440d-851b-7805b2a23c6b
+		summarizeBy: sum
+		sourceColumn: 2039
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2040
+		dataType: double
+		lineageTag: bcac8404-57f5-40e6-ac53-5886b1552dba
+		summarizeBy: sum
+		sourceColumn: 2040
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2041
+		dataType: double
+		lineageTag: 68655a66-0e82-4e44-8a66-410cc55974ac
+		summarizeBy: sum
+		sourceColumn: 2041
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2042
+		dataType: double
+		lineageTag: 0e55954c-1aed-45d4-aff3-259456d9f85d
+		summarizeBy: sum
+		sourceColumn: 2042
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2043
+		dataType: double
+		lineageTag: 9345f0b9-b482-4368-a7bc-ec7332c42c23
+		summarizeBy: sum
+		sourceColumn: 2043
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2044
+		dataType: double
+		lineageTag: 5e26fb94-14dd-4aca-82e2-f603e88e6ef6
+		summarizeBy: sum
+		sourceColumn: 2044
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2045
+		dataType: double
+		lineageTag: 75ce84c2-ea64-407f-99ee-83ec417f5695
+		summarizeBy: sum
+		sourceColumn: 2045
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2046
+		dataType: double
+		lineageTag: 17653823-4a8c-4426-abec-ea3b11714049
+		summarizeBy: sum
+		sourceColumn: 2046
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2047
+		dataType: double
+		lineageTag: 550d05e5-3658-4984-9990-e71bedd3780b
+		summarizeBy: sum
+		sourceColumn: 2047
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2048
+		dataType: double
+		lineageTag: 0cc6e9fe-d51d-4908-a84a-ec36d5d1e47a
+		summarizeBy: sum
+		sourceColumn: 2048
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2049
+		dataType: double
+		lineageTag: 6fc1692a-3380-4c6e-a26a-149bccbd1792
+		summarizeBy: sum
+		sourceColumn: 2049
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2050
+		dataType: double
+		lineageTag: cac79691-3f06-42ed-9dd6-4aaea01b7c4c
+		summarizeBy: sum
+		sourceColumn: 2050
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2051
+		dataType: double
+		lineageTag: 21ae8edd-672e-4c28-a38d-3a085389b1fd
+		summarizeBy: sum
+		sourceColumn: 2051
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2052
+		dataType: double
+		lineageTag: 4aeca4c1-8964-4ffb-bf89-17235efd45fa
+		summarizeBy: sum
+		sourceColumn: 2052
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2053
+		dataType: double
+		lineageTag: 6737ebcf-2173-41c4-af84-c1d304731863
+		summarizeBy: sum
+		sourceColumn: 2053
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Innovation Base query' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://bayergroup.sharepoint.com/sites/MarketingControlling/", [ApiVersion = 15]),
+				    #"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/" = Source{[Name="Innovation360.xlsx",#"Folder Path"="https://bayergroup.sharepoint.com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"),
+				    IP101_Sheet = #"Imported Excel Workbook"{[Item="IP101",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(IP101_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Measure", type text}, {"Cannibalization", type text}, {"Income Statement (P&L).", type text}, {"BSV Lvl 1", type text}, {"BSV Lvl 2", type text}, {"BSV Lvl 3", type text}, {"BSV Lvl 4", type text}, {"BSV Lvl 5", type text}, {"BSV Lvl 6", type text}, {"Reporting Unit", type text}, {"Brand Name (NPD)", type text}, {"Brand Name (LPPM)", type text}, {"NPD Lvl.1", type text}, {"NPD Lvl.2", type text}, {"NPD Name", type text}, {"NPD Status", type text}, {"NPD Process Step", type text}, {"NPD Developement Typ", type text}, {"NPD Program", type text}, {"NPD R&D Proj.Class", type text}, {"LPPM", type text}, {"LPPM Name", type text}, {"LPPM Innovation Type", type text}, {"LPPM Lifespan", type text}, {"Innovation Impact", type text}, {"Dossier Type", type text}, {"Production Site", type text}, {"Formulation", type text}, {"Formulation Name", type text}, {"Galenical Form", type text}, {"Pack Size", type text}, {"Straco Flag", type text}, {"NPD first Launch month/year", type text}, {"Launch year", type text}, {"Launch month/year", type text}, {"LPPM Status", type text}, {"Enterprise Classification (LPPM)", type text}, {"Currency Type", type text}, {"Fiscal year", type text}, {"1000", Int64.Type}, {"2013", type number}, {"2014", type number}, {"2015", type number}, {"2016", type number}, {"2017", type number}, {"2018", type number}, {"2019", type number}, {"2020", type number}, {"2021", type number}, {"2022", type number}, {"2023", type number}, {"2024", type number}, {"2025", type number}, {"2026", type number}, {"2027", type number}, {"2028", type number}, {"2029", type number}, {"2030", type number}, {"2031", type number}, {"2032", type number}, {"2033", type number}, {"2034", type number}, {"2035", type number}, {"2036", type number}, {"2037", type number}, {"2038", type number}, {"2039", type number}, {"2040", type number}, {"2041", type number}, {"2042", type number}, {"2043", type number}, {"2044", type number}, {"2045", type number}, {"2046", type number}, {"2047", type number}, {"2048", type number}, {"2049", type number}, {"2050", type number}, {"2051", type number}, {"2052", type number}, {"2053", type number}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",1)
+				in
+				    #"Removed Top Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

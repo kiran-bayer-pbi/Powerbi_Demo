@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Innovation Tracking_Excel Based_kiran"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "944d588c-deb2-b31d-4ca5-bf3ee07563e1"
+  }
+}

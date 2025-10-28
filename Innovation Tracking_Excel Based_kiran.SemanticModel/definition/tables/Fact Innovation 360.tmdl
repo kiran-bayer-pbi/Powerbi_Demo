@@ -1,0 +1,60 @@
+table 'Fact Innovation 360'
+	lineageTag: 3578919a-41a0-4e25-afeb-d8ad5c2e0128
+
+	column 'BSV Lvl 6'
+		dataType: string
+		lineageTag: cf5cd1dd-2be7-442d-a4e4-4265a1d41662
+		summarizeBy: none
+		sourceColumn: BSV Lvl 6
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM
+		dataType: string
+		lineageTag: 30813954-bb2a-40d8-83d7-f561545bd6a9
+		summarizeBy: none
+		sourceColumn: LPPM
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: dateTime
+		formatString: yyyy
+		lineageTag: 16e2a401-47aa-4ecd-a1b5-4a1ea452d177
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Value
+		dataType: double
+		lineageTag: 28ce9fcd-d5de-470b-87de-35451c3e46ee
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Fact Innovation 360' = m
+		mode: import
+		source =
+				let
+				    Source = #"Innovation Base query",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Measure", "Cannibalization", "Income Statement (P&L).", "BSV Lvl 1", "BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5", "Reporting Unit", "Brand Name (NPD)", "Brand Name (LPPM)", "NPD Lvl.1", "NPD Lvl.2", "NPD Name", "NPD Status", "NPD Process Step", "NPD Developement Typ", "NPD Program", "NPD R&D Proj.Class", "LPPM Name", "LPPM Innovation Type", "LPPM Lifespan", "Innovation Impact", "Dossier Type", "Production Site", "Formulation", "Formulation Name", "Galenical Form", "Pack Size", "Straco Flag", "NPD first Launch month/year", "Launch year", "Launch month/year", "LPPM Status", "Enterprise Classification (LPPM)", "Currency Type", "Fiscal year", "1000"}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns", {"LPPM", "BSV Lvl 6"}, "year", "Value"),
+				    #"Trimmed Text" = Table.TransformColumns(#"Unpivoted Other Columns",{{"year", Text.Trim, type text}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Trimmed Text",{{"year", type date}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

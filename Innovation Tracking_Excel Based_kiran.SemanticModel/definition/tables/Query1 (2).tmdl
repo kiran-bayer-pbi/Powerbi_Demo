@@ -1,0 +1,103 @@
+table 'Query1 (2)'
+	lineageTag: 08645965-9338-4ebd-979c-56eedfa4d800
+
+	column DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2b2a0b3f-eee1-4e5d-9dca-f8b6ca194d9c
+		summarizeBy: none
+		sourceColumn: DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column COUNTRY_MOD
+		dataType: string
+		lineageTag: 6fe04751-3bdd-488a-88c2-6a0841514720
+		summarizeBy: none
+		sourceColumn: COUNTRY_MOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAUNCH_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a65c0b85-0244-4e75-9d5b-3584c466bdf1
+		summarizeBy: none
+		sourceColumn: LAUNCH_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column BRAND
+		dataType: string
+		lineageTag: fd3c7b0b-9b68-4455-b399-afb84605a742
+		summarizeBy: none
+		sourceColumn: BRAND
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Name'
+		dataType: string
+		lineageTag: 81afa4cd-8456-4325-95fb-61fb70e9cc3f
+		summarizeBy: none
+		sourceColumn: NPD Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NPD Number'
+		dataType: string
+		lineageTag: fde93a0a-53d2-4967-8f42-6a75d38f383e
+		summarizeBy: none
+		sourceColumn: NPD Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM_NAME
+		dataType: string
+		lineageTag: e7f8970b-f14c-4dee-8d0a-23ba6171c098
+		summarizeBy: none
+		sourceColumn: LPPM_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM Innovation Type'
+		dataType: string
+		lineageTag: 6f668b3e-9e10-46da-b663-05fefea2a045
+		summarizeBy: none
+		sourceColumn: LPPM Innovation Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTUALS
+		dataType: double
+		lineageTag: 794e96ce-ba01-4e32-965e-5d452b745a26
+		summarizeBy: sum
+		sourceColumn: ACTUALS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CATEGORY
+		dataType: string
+		lineageTag: ae2f4822-911f-4d9d-8292-d63f3be0d44b
+		summarizeBy: none
+		sourceColumn: CATEGORY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Query1 (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Value.NativeQuery(Snowflake.Databases("BAY-CHDAAPRD.snowflakecomputing.com","ZDATACORE_DP_BRO_REPORTING",[Implementation="2.0", Role="CH.DAA.BROZONE.DATAENGINEER.DEV"]){[Name="ZDATACORE_DP_BRO"]}[Data], "SELECT DATE,COUNTRY_MOD, LAUNCH_DATE,BRAND,""NPD Name"",""NPD Number"",LPPM_NAME,""LPPM Innovation Type"",SUM(""Actual Value BUD"" ) AS Actuals,category#(lf)FROM ZDATACORE_DP_BRO.LX.PT_LX_LEGACY_PREVIEW#(lf)GROUP BY DATE,COUNTRY_MOD,category, LAUNCH_DATE,BRAND,""NPD Name"",""NPD Number"",LPPM_NAME,""LPPM Innovation Type""", null, [EnableFolding=true])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

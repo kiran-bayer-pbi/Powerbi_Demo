@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Innovation Tracking_Excel Based_kiran"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4d7bc2a2-c6aa-896e-41cd-412c3e6b2964"
+  }
+}

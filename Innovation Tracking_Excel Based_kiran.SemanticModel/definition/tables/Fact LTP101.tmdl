@@ -1,0 +1,107 @@
+table 'Fact LTP101'
+	lineageTag: 06bea405-a93d-421a-9edf-ea06225d4d4d
+
+	column 'BSV Lvl 6'
+		dataType: string
+		lineageTag: 274b4163-04eb-4b01-899b-cba94cacb292
+		summarizeBy: none
+		sourceColumn: BSV Lvl 6
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPPM
+		dataType: string
+		lineageTag: 9c2fee25-8356-4b72-aea9-945057558a02
+		summarizeBy: none
+		sourceColumn: LPPM
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		lineageTag: 81dc7f63-630f-4ae3-8842-61a88e6f74c0
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal year'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ee99eafd-0993-4b64-bdc3-3edad82b2111
+		summarizeBy: none
+		sourceColumn: Fiscal year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Posting period'
+		dataType: string
+		lineageTag: 51a00d85-b4e2-4bb6-8a87-061aa240fea7
+		summarizeBy: none
+		sourceColumn: Posting period
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LPPM @BUD CY'
+		dataType: double
+		lineageTag: 75591379-8ffe-41fa-86d6-7a296fbf997e
+		summarizeBy: sum
+		sourceColumn: LPPM @BUD CY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ACT @BUD CY'
+		dataType: double
+		lineageTag: 164add8e-3455-4d8e-95d0-c185bc858491
+		summarizeBy: sum
+		sourceColumn: ACT @BUD CY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'BUD @BUD CY'
+		dataType: double
+		lineageTag: 0abd4c6b-d257-4da3-997f-ff0d9890fb22
+		summarizeBy: sum
+		sourceColumn: BUD @BUD CY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'FC @BUD CY'
+		dataType: double
+		lineageTag: e2ebc89f-e6bb-4aeb-a8d7-2fefd9f57dd0
+		summarizeBy: sum
+		sourceColumn: FC @BUD CY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Fact LTP101' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://bayergroup.sharepoint.com/sites/MarketingControlling/", [ApiVersion = 15]),
+				    #"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/" = Source{[Name="Innovation360.xlsx",#"Folder Path"="https://bayergroup.sharepoint.com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Innovation360 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"),
+				    #"LTP101 @BUD_Sheet" = #"Imported Excel Workbook"{[Item="LTP101 @BUD",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"LTP101 @BUD_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Income Statement (P&L).", type text}, {"BSV Lvl 2", type text}, {"BSV Lvl 3", type text}, {"BSV Lvl 4", type text}, {"BSV Lvl 5", type text}, {"BSV Lvl 6", type text}, {"Type", type text}, {"NPD Lvl.2", type text}, {"NPD Name", type text}, {"LPPM", type text}, {"LPPM Name", type text}, {"CV 7 Reporting Unit", type text}, {"CV Brand Family", type text}, {"CV Brand", type text}, {"Brand Name (NPD)", type text}, {"Formulation", type text}, {"Formulation Name", type text}, {"Material", type text}, {"Material Name", type text}, {"Pack Size", type text}, {"LPPM Innovation Type", type text}, {"NPD R&D Proj.Class", type text}, {"LPPM Status", type text}, {"LPPM Lauch year", type text}, {"LPPM Launch month/year", type text}, {"NPD First Launch Year", type text}, {"Enterprise Classification", type text}, {"Fiscal year", type text}, {"Fiscal year/period", type text}, {"Posting period", type text}, {"LPPM @BUD CY", type any}, {"ACT @BUD CY", type any}, {"BUD @BUD CY", type any}, {"FC @BUD CY", type any}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",2),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Top Rows",{"Income Statement (P&L).", "BSV Lvl 2", "BSV Lvl 3", "BSV Lvl 4", "BSV Lvl 5", "Type", "NPD Lvl.2", "NPD Name", "LPPM Name", "CV 7 Reporting Unit", "CV Brand Family", "CV Brand", "Brand Name (NPD)", "Formulation", "Formulation Name", "Material Name", "Pack Size", "LPPM Innovation Type", "NPD R&D Proj.Class", "LPPM Status", "LPPM Lauch year", "LPPM Launch month/year", "NPD First Launch Year", "Enterprise Classification", "Fiscal year/period"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Columns",{{"Fiscal year", Text.Trim, type text}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Trimmed Text",{{"Fiscal year", type date}, {"LPPM @BUD CY", type number}, {"ACT @BUD CY", type number}, {"BUD @BUD CY", type number}, {"FC @BUD CY", type number}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

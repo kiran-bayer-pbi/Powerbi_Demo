@@ -1,0 +1,23 @@
+table YearParameter
+	lineageTag: 43038a65-2001-4e43-8454-625007ff9e10
+
+	column Years
+		formatString: 0
+		lineageTag: c042bcb3-5492-455d-9c93-208b528a0016
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Years]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition YearParameter = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE("Years", INTEGER, { {1}, {2}, {3},{4}, {5},{6} })
+				
+				
+				```
+
+	annotation PBI_Id = b06475be59c149e1931ec12d140ed84a
+

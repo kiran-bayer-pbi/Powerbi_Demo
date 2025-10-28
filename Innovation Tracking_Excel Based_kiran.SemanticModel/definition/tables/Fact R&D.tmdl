@@ -1,0 +1,292 @@
+table 'Fact R&D'
+	lineageTag: 7cdbf863-5513-4c9e-80ab-1fabdf1cda6a
+
+	column 'Project ID #'
+		dataType: string
+		lineageTag: f7799050-c8b0-4d57-b6ad-f35c403103d2
+		summarizeBy: none
+		sourceColumn: Project ID #
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: ce45ba3f-4e4c-4964-b8dc-ac77abec4522
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bc6f940-4fc0-4bf1-a37e-c82a92414f66
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: fb267c01-5121-4a1d-a594-da93a794810d
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: 598e53eb-338a-4d21-9b19-aced2d928fae
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: 255d9516-de42-49ea-b0ab-9b7d3d0e2061
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: ced9fbfe-dd24-4f1a-b9a7-198089c80a28
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D Internal Costs (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9248b4e8-7f28-4e8c-95cc-61e1f48ae946
+		summarizeBy: none
+		sourceColumn: R&D Internal Costs (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D Internal Costs (TEUR)'
+		dataType: int64
+		formatString: 0
+		lineageTag: a575b3f5-8a90-4069-8f48-99d2ed49de8d
+		summarizeBy: none
+		sourceColumn: Total R&D Internal Costs (TEUR)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D Internal FTE(s)'
+		dataType: double
+		lineageTag: ae9bf060-0250-486d-ae2d-c9a9b8d0c09b
+		summarizeBy: none
+		sourceColumn: Total R&D Internal FTE(s)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before'
+		dataType: int64
+		formatString: 0
+		lineageTag: 775b457a-bc9b-4d8a-be3b-1a674bbf5e48
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: e7508d71-c887-412f-97c7-719b045a02cd
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: e63fe054-3e71-44b7-886f-ed243a162e17
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: 28cfc738-7ce1-4faf-a9e5-2f56433e4e35
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: 665d2c35-1a4e-4427-ae09-983810088d99
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: eef3a58b-ef4a-4a52-8148-931fedbfb465
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: acfc27f1-5ca9-404a-b20a-2a3b333020a8
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Includes Clinical Costs) (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1070ddf8-f41c-4081-875a-7276f5ca81dd
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Includes Clinical Costs) (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D External Costs (Includes Clinical Costs) (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: a91a80d1-abcf-458f-9c32-4a866556cc09
+		summarizeBy: none
+		sourceColumn: "Total R&D External Costs (Includes Clinical Costs) (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before'
+		dataType: int64
+		formatString: 0
+		lineageTag: 00a53097-e399-4165-9b1c-0ac7a00ba20b
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024'
+		dataType: int64
+		formatString: 0
+		lineageTag: 22fbdd06-7d66-4b8f-824d-61f5c93c7277
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2025'
+		dataType: int64
+		formatString: 0
+		lineageTag: e3833d97-1659-4b53-b32d-96f0c4109163
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2025
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2026'
+		dataType: int64
+		formatString: 0
+		lineageTag: 37cc2754-deab-4835-8cd2-cfd9b914a560
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2027'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9efe7ec7-fb32-4c2e-9859-d029b481733f
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2027
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2028'
+		dataType: int64
+		formatString: 0
+		lineageTag: df533323-628d-414b-88af-70a28cb08220
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2028
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2029'
+		dataType: int64
+		formatString: 0
+		lineageTag: a1f176d0-d4db-4026-b900-d6576540083f
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2029
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'R&D External Costs (Clinical Costs Only) (TEUR) 2030+'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5644063a-e114-4ebe-a3ce-5a967edca630
+		summarizeBy: none
+		sourceColumn: R&D External Costs (Clinical Costs Only) (TEUR) 2030+
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total R&D External Costs (Clinical Costs Only) (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: d640b52d-2c3b-4737-9ad8-4a49c8188b01
+		summarizeBy: none
+		sourceColumn: "Total R&D External Costs (Clinical Costs Only) (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: 8710fbf5-4abd-4a11-9956-00ce50672211
+		summarizeBy: none
+		sourceColumn: "Marketing Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Other Operating Costs Total (TEUR) '
+		dataType: int64
+		formatString: 0
+		lineageTag: 90a2997f-7e7c-4ff6-af3d-7901e033fb07
+		summarizeBy: none
+		sourceColumn: "Other Operating Costs Total (TEUR) "
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fact R&D' = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://bayergroup.sharepoint.com/sites/MarketingControlling/", [ApiVersion = 15]),
+				    #"Innova Portfolio Export Report 22-Aug-2025 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/" = Source{[Name="Innova Portfolio Export Report 22-Aug-2025.xlsx",#"Folder Path"="https://bayergroup.sharepoint.com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"]}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(#"Innova Portfolio Export Report 22-Aug-2025 xlsx_https://bayergroup sharepoint com/sites/MarketingControlling/Shared Documents/General/Kiran-Stefan/Innovation 360/"),
+				    #"R&D Export Report_Sheet" = #"Imported Excel Workbook"{[Item="R&D Export Report",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"R&D Export Report_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Project ID #", type text}, {"Project", type text}, {"Program ID #", type text}, {"Program", type text}, {"GCBU", type text}, {"Brand", type text}, {"Status", type text}, {"Project Cancellation Date", type any}, {"Cancellation Reason", type text}, {"R&D Project Classification", type text}, {"Estimated Size of Opportunity (Y3 Incr NS in Mio €)", type number}, {"Estimated Size of Opportunity (Y5 Incr NS in Mio €)", type number}, {"PLS (in Mio €)", type number}, {"1st Launch Market", type text}, {"LPPM Launch Date", type any}, {"1st Launch Market Schedule Date", type any}, {"2nd Launch Market", type text}, {"Region 1st market", type text}, {"Innovation Impact", type text}, {"Archetype", type text}, {"Project Scope", type text}, {"Strategic Fit", type text}, {"Swimlane", type text}, {"Category Segment", type text}, {"R&D Budget Group", type text}, {"R&D Management Group", type text}, {"Brand Classification", type text}, {"Dossier Type", type text}, {"Tracking Status", type text}, {"Executive Summary", type text}, {"Project Leader", type text}, {"Formulations", type text}, {"Description", type text}, {"Short Description", type text}, {"Project Status", type text}, {"Clinicals Required", type text}, {"Project Initiation Year", Int64.Type}, {"Project Creation Date", type datetime}, {"Sustainability Rating", type text}, {"Uniqueness (Advantage Outcome)", type text}, {"Ownability", type text}, {"Latest Achieved Key Milestone", type text}, {"Draft", type datetime}, {"Scoping", type any}, {"Feasibility Contract", type any}, {"Development Contract", type any}, {"GSC", type any}, {"Small Scale", type any}, {"Large Scale", type any}, {"Submission", type any}, {"Launch Contract", type any}, {"1st Launch", type any}, {"2nd Launch", type any}, {"End", type datetime}, {"Project Duration – Development Contract to 1st Launch (in months)", Int64.Type}, {"Development Duration – Development Contract to Submission (in months)", Int64.Type}, {"Delay Reason", type text}, {"Project History", type text}, {"Development Type", type text}, {"Development Sites", type text}, {"Production Sites", type text}, {"Clinical Medical PTS", Int64.Type}, {"Regulatory PTS", Int64.Type}, {"Technical Development PTS", Int64.Type}, {"Overall PTS", Int64.Type}, {"Product Supply Flag", type text}, {"R&D Internal Costs (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D Internal Costs (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D Internal Costs (TEUR) 2025", Int64.Type}, {"R&D Internal Costs (TEUR) 2026", Int64.Type}, {"R&D Internal Costs (TEUR) 2027", Int64.Type}, {"R&D Internal Costs (TEUR) 2028", Int64.Type}, {"R&D Internal Costs (TEUR) 2029", Int64.Type}, {"R&D Internal Costs (TEUR) 2030+", Int64.Type}, {"Total R&D Internal Costs (TEUR)", Int64.Type}, {"Total R&D Internal FTE(s)", type number}, {"R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2025", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2026", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2027", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2028", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2029", Int64.Type}, {"R&D External Costs (Includes Clinical Costs) (TEUR) 2030+", Int64.Type}, {"Total R&D External Costs (Includes Clinical Costs) (TEUR) ", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2023 and before", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) SUNK COSTS 2024", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2025", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2026", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2027", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2028", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2029", Int64.Type}, {"R&D External Costs (Clinical Costs Only) (TEUR) 2030+", Int64.Type}, {"Total R&D External Costs (Clinical Costs Only) (TEUR) ", Int64.Type}, {"Marketing Costs Total (TEUR) ", Int64.Type}, {"Other Operating Costs Total (TEUR) ", Int64.Type}, {"Dep/Amort Costs Total (TEUR) ", Int64.Type}, {"Milestone Payments Costs Total (TEUR) ", Int64.Type}, {"Resources Comments ", type text}, {"Last PM Modified Date", type datetime}, {"Last Overall Modified Date", type datetime}, {"Other Markets", type text}, {"Region 2nd market", type text}, {"Regions Other markets", type text}, {"EI&P Resource", type text}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Changed Type", {"Project ID #"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Duplicates",{"Project", "Program ID #", "Program", "GCBU", "Brand", "Status", "Project Cancellation Date", "Cancellation Reason", "R&D Project Classification", "Estimated Size of Opportunity (Y3 Incr NS in Mio €)", "Estimated Size of Opportunity (Y5 Incr NS in Mio €)", "PLS (in Mio €)", "1st Launch Market", "LPPM Launch Date", "1st Launch Market Schedule Date", "2nd Launch Market", "Region 1st market", "Innovation Impact", "Archetype", "Project Scope", "Strategic Fit", "Swimlane", "Category Segment", "R&D Budget Group", "R&D Management Group", "Brand Classification", "Dossier Type", "Tracking Status", "Executive Summary", "Project Leader", "Formulations", "Description", "Short Description", "Project Status", "Clinicals Required", "Project Initiation Year", "Project Creation Date", "Sustainability Rating", "Uniqueness (Advantage Outcome)", "Ownability", "Latest Achieved Key Milestone", "Draft", "Scoping", "Feasibility Contract", "Development Contract", "GSC", "Small Scale", "Large Scale", "Submission", "Launch Contract", "1st Launch", "2nd Launch", "End", "Project Duration – Development Contract to 1st Launch (in months)", "Development Duration – Development Contract to Submission (in months)", "Delay Reason", "Project History", "Development Type", "Development Sites", "Production Sites", "Clinical Medical PTS", "Regulatory PTS", "Technical Development PTS", "Overall PTS", "Product Supply Flag", "Dep/Amort Costs Total (TEUR) ", "Milestone Payments Costs Total (TEUR) ", "Resources Comments ", "Last PM Modified Date", "Last Overall Modified Date", "Other Markets", "Region 2nd market", "Regions Other markets", "EI&P Resource", "R&D Internal Costs (TEUR) SUNK COSTS 2023 and before"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,132 @@
+table 'Dim Date'
+	lineageTag: 4c2dcfe8-2c38-4911-a9e9-06221dd56c0e
+
+	measure 'Selected Max Date' = ```
+			
+			VAR _SelMonthStart = SELECTEDVALUE ( 'Slicer Month'[MonthStart] )
+			VAR _Fallback      = MAX ( 'Dim Date'[Date] )
+			RETURN EOMONTH ( COALESCE ( _SelMonthStart, _Fallback ), 0 )
+			
+			
+			```
+		formatString: General Date
+		lineageTag: 4a960fc8-771e-4e71-a932-5c68b5c1faed
+
+	measure 'Selected Start Date' = ```
+			
+			VAR SelectedMaxDate = [Selected Max Date]
+			VAR SelectedPeriod = SELECTEDVALUE('Period Filter'[Period], "MAT")
+			VAR RawStartDate =
+			    SWITCH(
+			        SelectedPeriod,
+			        "P3M", EDATE(SelectedMaxDate, -2),
+			        "P6M", EDATE(SelectedMaxDate, -5),
+			        "MAT", EDATE(SelectedMaxDate, -11),
+			        "Month", SelectedMaxDate,
+			        "YTD", DATE(YEAR(SelectedMaxDate), 1, 1),
+			        DATE(2000, 1, 1)  -- Lifetime
+			    )
+			RETURN
+			-- Always get 1st day of that month
+			DATE(YEAR(RawStartDate), MONTH(RawStartDate), 1)
+			
+			```
+		formatString: General Date
+		lineageTag: b54f4cdb-30d2-48f4-8516-45f1c1ff470c
+
+	column Date
+		formatString: General Date
+		lineageTag: f64f1983-1671-475c-a2e4-de717866bea5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 8c8fd954-2fa5-4eb1-a8a6-6b1bc965ccc6
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		lineageTag: 1aed90c4-f55f-4bc7-b4fb-f5a6c8e1a02b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month]
+		sortByColumn: 'Year Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month Number'
+		formatString: 0
+		lineageTag: e1596c31-c4fc-4b0b-a340-8d32db21f402
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 3f47fe79-dbe4-41cc-b673-a8de4e61eb7e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: 4a6b1a76-ddf1-4e70-9241-3695eccb0f3b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week'
+		lineageTag: 0caddfe1-4b86-460f-9a0e-bd1419587984
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day of Week]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week Number'
+		formatString: 0
+		lineageTag: 9c285799-2613-4ebc-a9d2-5fcef2ea72ca
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day of Week Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim Date' = calculated
+		mode: import
+		source = ```
+				
+				VAR MinFactDate = MIN('Fact Table Snowflake'[DATE])
+				VAR MaxFactDate = MAX('Fact Table Snowflake'[DATE])
+				
+				RETURN
+				ADDCOLUMNS (
+				    FILTER (
+				        CALENDAR(MinFactDate, MaxFactDate),
+				        YEAR([Date]) >= YEAR(MinFactDate)
+				    ),
+				    "Year", YEAR([Date]),
+				    "Year Month", FORMAT([Date], "mmm yyyy"),
+				    "Year Month Number", YEAR([Date]) * 12 + MONTH([Date]),
+				    "Month", FORMAT([Date], "mmm"),
+				    "Month Number", MONTH([Date]),
+				    "Day of Week", FORMAT([Date], "ddd"),
+				    "Day of Week Number", WEEKDAY([Date], 1)
+				)
+				
+				```
+
+	annotation PBI_Id = 9048c7094a7242a5af37135fc8898d30
+
