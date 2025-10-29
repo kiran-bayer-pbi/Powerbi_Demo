@@ -7,7 +7,7 @@
     "z": 18000,
     "height": 123.48122866894197,
     "width": 221.160409556314,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -488,23 +488,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a958de3e63b40f89b87d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures Table"
-              }
-            },
-            "Property": "NPD without BPC claims"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

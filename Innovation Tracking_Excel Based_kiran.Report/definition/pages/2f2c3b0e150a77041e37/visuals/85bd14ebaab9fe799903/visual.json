@@ -4,10 +4,10 @@
   "position": {
     "x": 70.034129692832764,
     "y": 152.96928327645051,
-    "z": 48000,
-    "height": 43.310580204778155,
+    "z": 47000,
+    "height": 51.604095563139929,
     "width": 168.6348122866894,
-    "tabOrder": 44000
+    "tabOrder": 43000
   },
   "visual": {
     "visualType": "card",
@@ -96,23 +96,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "de885a88ca17ea9843df",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures Table"
-              }
-            },
-            "Property": "Hello label"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

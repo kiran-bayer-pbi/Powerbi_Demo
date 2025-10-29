@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "d25947858b872bdf342a",
+  "name": "4d25f51e0a3bf4642ce5",
   "position": {
-    "x": 37.5,
-    "y": 215,
-    "z": 32000,
-    "height": 21.875,
-    "width": 171.25,
-    "tabOrder": 36000
+    "x": 220.23890784982933,
+    "y": 159.419795221843,
+    "z": 54000,
+    "height": 72.798634812286679,
+    "width": 177.84982935153582,
+    "tabOrder": 52000
   },
   "visual": {
     "visualType": "textbox",
@@ -47,21 +47,21 @@
                       "Entity": "_Measures Table"
                     }
                   },
-                  "Property": "LPPM Launch date label"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Property": "User Name"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "20D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -70,21 +70,17 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0.2
+                      "ColorId": 2,
+                      "Percent": -0.25
                     }
                   }
                 }
               }
             },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "null"
-                    }
-                  }
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

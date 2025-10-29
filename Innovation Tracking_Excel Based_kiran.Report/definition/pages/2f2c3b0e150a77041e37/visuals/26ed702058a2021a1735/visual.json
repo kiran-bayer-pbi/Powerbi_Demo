@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "c6a0533b3ebaaaab7761",
+  "name": "26ed702058a2021a1735",
   "position": {
-    "x": 48.839590443686006,
-    "y": 246.0409556313993,
+    "x": 65.426621160409567,
+    "y": 22.116040955631412,
     "z": 0,
-    "height": 786.04095563139924,
-    "width": 880.03412969283272,
-    "tabOrder": 22000
+    "height": 70.9556313993174,
+    "width": 244.19795221843003,
+    "tabOrder": 54000
   },
   "visual": {
     "visualType": "shape",
@@ -18,14 +18,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangleRounded'"
-                }
-              }
-            },
-            "rectangleRoundedCurve": {
-              "expr": {
-                "Literal": {
-                  "Value": "4L"
+                  "Value": "'pill'"
                 }
               }
             }
@@ -56,34 +49,13 @@
               }
             }
           }
-        }
-      ],
-      "outline": [
+        },
         {
           "properties": {
-            "weight": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "50D"
+                  "Value": "59D"
                 }
               }
             }
@@ -93,13 +65,13 @@
           }
         }
       ],
-      "shadow": [
+      "outline": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -107,21 +79,29 @@
         },
         {
           "properties": {
-            "color": {
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "lineColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#7DB3B9'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0.2
                     }
                   }
                 }
               }
             },
-            "shadowPositionPreset": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "'centerLeft'"
+                  "Value": "81D"
                 }
               }
             }

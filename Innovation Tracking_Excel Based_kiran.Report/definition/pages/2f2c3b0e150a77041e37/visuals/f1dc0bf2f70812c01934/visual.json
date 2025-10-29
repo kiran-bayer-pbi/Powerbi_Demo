@@ -7,7 +7,7 @@
     "z": 35000,
     "height": 54.368600682593851,
     "width": 189.82935153583617,
-    "tabOrder": 31000
+    "tabOrder": 30000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -102,7 +102,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -110,8 +110,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#367077'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
                     }
                   }
                 }
