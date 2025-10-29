@@ -1,0 +1,593 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 185.57692536499826,
+            "y": 290.36666249236873
+          },
+          "nodeIndex": "Dim Date",
+          "nodeLineageTag": "4c2dcfe8-2c38-4911-a9e9-06221dd56c0e",
+          "size": {
+            "height": 382.49628916630996,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 2376.207502719044,
+            "y": 401.06932349657245
+          },
+          "nodeIndex": "Query1 (2)",
+          "nodeLineageTag": "08645965-9338-4ebd-979c-56eedfa4d800",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 2379.0128676696354,
+            "y": 714.57852985959278
+          },
+          "nodeIndex": "Period Filter",
+          "nodeLineageTag": "bf53e335-efad-479f-a4cc-520e9725c9c6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 2383.3096484670523,
+            "y": 925.67803460243067
+          },
+          "nodeIndex": "_Measures Table",
+          "nodeLineageTag": "d25ab305-25c7-4838-87ae-f37d5fb25b4c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 2374.9613264232348,
+            "y": 260.26331207678948
+          },
+          "nodeIndex": "Value Table",
+          "nodeLineageTag": "fd13620d-dff1-4b6b-9c9b-4129ccd8b63d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2128.7420767489784,
+            "y": 704.34016897099889
+          },
+          "nodeIndex": "YearParameter",
+          "nodeLineageTag": "43038a65-2001-4e43-8454-625007ff9e10",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 2387.0591513907025,
+            "y": 1138.3375891350215
+          },
+          "nodeIndex": "_Labels Measures",
+          "nodeLineageTag": "5969bb55-9e3a-4f03-8d5c-e1a9dd1d06ea",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 2133.8264535776589,
+            "y": 913.067263621625
+          },
+          "nodeIndex": "Slicer Month",
+          "nodeLineageTag": "4fc778e3-8c26-43b8-8238-f1ff99732a80",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 440.17041280282177,
+            "y": 287.8755791601377
+          },
+          "nodeIndex": "Dim Geography",
+          "nodeLineageTag": "e03aeae5-9351-4317-8045-07845e67aee3",
+          "size": {
+            "height": 387.90675124213692,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 2124.9836106024009,
+            "y": 394.1695123307793
+          },
+          "nodeIndex": "Innovation Base query",
+          "nodeLineageTag": "17c449a3-dd42-4f6b-90ec-6bce58f87744",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 940.96590169077569,
+            "y": 291.85716963669688
+          },
+          "nodeIndex": "Dim Brand",
+          "nodeLineageTag": "e0a76d5c-7713-4059-a72f-62cc7023542e",
+          "size": {
+            "height": 388.05765001731038,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1193.0953291658457,
+            "y": 292.4220803326204
+          },
+          "nodeIndex": "Dim NPD",
+          "nodeLineageTag": "1979ef88-61f0-4245-8ca1-12c4415f8d7a",
+          "size": {
+            "height": 387.04239403736267,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 2135.1568901721903,
+            "y": 1137.9940268205912
+          },
+          "nodeIndex": "Fact",
+          "nodeLineageTag": "26003292-17e5-46fc-8402-2e85905097c0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 76.556310400347741,
+            "y": 1005.0573085463028
+          },
+          "nodeIndex": "Fact Innovation 360",
+          "nodeLineageTag": "3578919a-41a0-4e25-afeb-d8ad5c2e0128",
+          "size": {
+            "height": 193.86676956872964,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1442.8963576131648,
+            "y": 291.83177222244717
+          },
+          "nodeIndex": "Dim Brand LTP101",
+          "nodeLineageTag": "ed185f8c-df5b-48aa-9085-f7856416ba24",
+          "size": {
+            "height": 383.31201427550252,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 434.05814225715494,
+            "y": 992.5251276241645
+          },
+          "nodeIndex": "Fact LTP101",
+          "nodeLineageTag": "06bea405-a93d-421a-9edf-ea06225d4d4d",
+          "size": {
+            "height": 328.4881913583265,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1686.5770179491963,
+            "y": 294.76111418466587
+          },
+          "nodeIndex": "Dim R&D",
+          "nodeLineageTag": "bf280ae5-15a4-4267-8f6b-392ca2c395af",
+          "size": {
+            "height": 382.23573437576397,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1883.2998428029898,
+            "y": 1142.6729250975166
+          },
+          "nodeIndex": "Fact Table Snowflake",
+          "nodeLineageTag": "60868473-f3f2-4cf2-bfc6-4f8ca114ffc4",
+          "size": {
+            "height": 253.23686291530521,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1149.3031018499939,
+            "y": 955.282308642668
+          },
+          "nodeIndex": "Fact R&D",
+          "nodeLineageTag": "7cdbf863-5513-4c9e-80ab-1fabdf1cda6a",
+          "size": {
+            "height": 440.38176089716148,
+            "width": 434.36305873503943
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1822.2483967344972,
+            "y": 863.96815622411134
+          },
+          "nodeIndex": "t_lx_legacy_release",
+          "nodeLineageTag": "4f6e30f5-0e9e-40c2-a242-4a3dd88f5236",
+          "size": {
+            "height": 300,
+            "width": 949.75546586313067
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 800.130011382367,
+            "y": 930.4152704045614
+          },
+          "nodeIndex": "FACT LPPM",
+          "nodeLineageTag": "42d9d42e-207a-4406-87f7-0dba5a3de6e4",
+          "size": {
+            "height": 386.78145219097246,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 690.711808928365,
+            "y": 283.82119003900516
+          },
+          "nodeIndex": "Dim LPPM",
+          "nodeLineageTag": "74510337-6af2-4020-a07b-aa005a90af28",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2745.44755219728,
+            "y": 681.45608630345055
+          },
+          "nodeIndex": "Dim Category",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2952.8912417969323,
+            "y": 575.61979473083079
+          },
+          "nodeIndex": "_Labels Tooltips",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 78.357757658120519,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 777,
+            "y": 55
+          },
+          "nodeIndex": "Dim Date",
+          "nodeLineageTag": "4c2dcfe8-2c38-4911-a9e9-06221dd56c0e",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1325.8517995762907,
+            "y": 272.83595142935178
+          },
+          "nodeIndex": "Slicer Month",
+          "nodeLineageTag": "4fc778e3-8c26-43b8-8238-f1ff99732a80",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 496.42532086500603,
+            "y": 507.33328680972386
+          },
+          "nodeIndex": "Fact Table Snowflake",
+          "size": {
+            "height": 351,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 70.9555439009688,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 276.24746051225429,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 568,
+            "y": 25
+          },
+          "nodeIndex": "_Labels Measures",
+          "nodeLineageTag": "5969bb55-9e3a-4f03-8d5c-e1a9dd1d06ea",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 25
+          },
+          "nodeIndex": "_Measures Table",
+          "nodeLineageTag": "d25ab305-25c7-4838-87ae-f37d5fb25b4c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 25
+          },
+          "nodeIndex": "Dim Brand",
+          "nodeLineageTag": "e0a76d5c-7713-4059-a72f-62cc7023542e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -25
+          },
+          "nodeIndex": "Dim Date",
+          "nodeLineageTag": "4c2dcfe8-2c38-4911-a9e9-06221dd56c0e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 75
+          },
+          "nodeIndex": "Dim Geography",
+          "nodeLineageTag": "e03aeae5-9351-4317-8045-07845e67aee3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988,
+            "y": 25
+          },
+          "nodeIndex": "Dim NPD",
+          "nodeLineageTag": "1979ef88-61f0-4245-8ca1-12c4415f8d7a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1645.7496890328994,
+            "y": 419.25608442040181
+          },
+          "nodeIndex": "Fact",
+          "nodeLineageTag": "26003292-17e5-46fc-8402-2e85905097c0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556,
+            "y": 25
+          },
+          "nodeIndex": "Innovation Base query",
+          "nodeLineageTag": "17c449a3-dd42-4f6b-90ec-6bce58f87744",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840,
+            "y": 99
+          },
+          "nodeIndex": "Period Filter",
+          "nodeLineageTag": "bf53e335-efad-479f-a4cc-520e9725c9c6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 25
+          },
+          "nodeIndex": "Query1 (2)",
+          "nodeLineageTag": "08645965-9338-4ebd-979c-56eedfa4d800",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3408,
+            "y": 111
+          },
+          "nodeIndex": "Slicer Month",
+          "nodeLineageTag": "4fc778e3-8c26-43b8-8238-f1ff99732a80",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3692,
+            "y": 111
+          },
+          "nodeIndex": "Value Table",
+          "nodeLineageTag": "fd13620d-dff1-4b6b-9c9b-4129ccd8b63d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3976,
+            "y": 75
+          },
+          "nodeIndex": "YearParameter",
+          "nodeLineageTag": "43038a65-2001-4e43-8454-625007ff9e10",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334,
+            "y": -25
+          },
+          "nodeIndex": "Fact Table Snowflake",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704,
+            "y": 25
+          },
+          "nodeIndex": "FACT LPPM",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 2",
+      "zoomValue": 74.5708212549747,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

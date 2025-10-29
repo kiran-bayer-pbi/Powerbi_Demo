@@ -11752,7 +11752,12 @@ cultureInfo en-US
 			            "State": "Generated"
 			          }
 			        },
-			        {},
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
 			        {
 			          "lppm location": {
 			            "Type": "Noun",
@@ -50042,7 +50047,12 @@ cultureInfo en-US
 			            "State": "Generated"
 			          }
 			        },
-			        {},
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
 			        {
 			          "lppm location": {
 			            "Type": "Noun",

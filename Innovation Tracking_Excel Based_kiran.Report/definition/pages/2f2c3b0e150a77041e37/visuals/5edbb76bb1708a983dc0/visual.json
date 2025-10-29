@@ -508,5 +508,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6c97a7b54da500a757b1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures Table"
+              }
+            },
+            "Property": "R&D 2025 Cost"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

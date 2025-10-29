@@ -126,7 +126,7 @@ table '_Measures Table'
 			```
 		lineageTag: e5c5690c-7152-4363-bf00-44e6b8eed3f5
 
-	measure 'Hello label' = "Hello,"
+	measure 'Hello label' = "Welcome,"
 		lineageTag: 386a7448-f4b6-4648-ac23-fcd6485187a5
 
 	measure 'Welcome msg' = "Lets take a look at Initiative Success %"
