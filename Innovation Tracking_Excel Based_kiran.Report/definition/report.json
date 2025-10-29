@@ -54,23 +54,12 @@
   ],
   "resourcePackages": [
     {
-      "name": "SharedResources",
-      "type": "SharedResources",
-      "items": [
-        {
-          "name": "CY23SU04",
-          "path": "BaseThemes/CY23SU04.json",
-          "type": "BaseTheme"
-        }
-      ]
-    },
-    {
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Green_Modern_Marketing_Logo_(46633495146386701.png",
-          "path": "Green_Modern_Marketing_Logo_(46633495146386701.png",
+          "name": "background-gradient-lights9676981063798944.jpg",
+          "path": "background-gradient-lights9676981063798944.jpg",
           "type": "Image"
         },
         {
@@ -79,18 +68,8 @@
           "type": "Image"
         },
         {
-          "name": "background-gradient-lights9676981063798944.jpg",
-          "path": "background-gradient-lights9676981063798944.jpg",
-          "type": "Image"
-        },
-        {
-          "name": "Picture32565426149458512.png",
-          "path": "Picture32565426149458512.png",
-          "type": "Image"
-        },
-        {
-          "name": "Innovation360_background129386609920404875.png",
-          "path": "Innovation360_background129386609920404875.png",
+          "name": "bg_final365506349576902.png",
+          "path": "bg_final365506349576902.png",
           "type": "Image"
         },
         {
@@ -99,14 +78,35 @@
           "type": "Image"
         },
         {
-          "name": "bg_final365506349576902.png",
-          "path": "bg_final365506349576902.png",
+          "name": "Green_Modern_Marketing_Logo_(46633495146386701.png",
+          "path": "Green_Modern_Marketing_Logo_(46633495146386701.png",
+          "type": "Image"
+        },
+        {
+          "name": "Innovation360_background129386609920404875.png",
+          "path": "Innovation360_background129386609920404875.png",
           "type": "Image"
         },
         {
           "name": "Innovation360_background129412532684414057.png",
           "path": "Innovation360_background129412532684414057.png",
           "type": "Image"
+        },
+        {
+          "name": "Picture32565426149458512.png",
+          "path": "Picture32565426149458512.png",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY23SU04",
+          "path": "BaseThemes/CY23SU04.json",
+          "type": "BaseTheme"
         }
       ]
     }
