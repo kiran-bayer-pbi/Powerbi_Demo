@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 59.8976109215017,
     "width": 218.39590443686006,
-    "tabOrder": 37000
+    "tabOrder": 38000
   },
   "visual": {
     "visualType": "slicer",
@@ -154,5 +154,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ea5d8b3b53ca134d8aaf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim Geography"
+              }
+            },
+            "Property": "BSV Lvl 2"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

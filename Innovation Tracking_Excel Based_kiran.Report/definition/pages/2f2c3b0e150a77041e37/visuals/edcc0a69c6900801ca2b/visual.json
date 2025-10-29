@@ -4,10 +4,10 @@
   "position": {
     "x": 857.91808873720129,
     "y": 241.4334470989761,
-    "z": 53000,
+    "z": 55000,
     "height": 53.44709897610921,
     "width": 47.918088737201366,
-    "tabOrder": 51000
+    "tabOrder": 55000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -309,5 +309,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ea369a1b479a25e80c08",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Labels Tooltips"
+              }
+            },
+            "Property": "I button"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
