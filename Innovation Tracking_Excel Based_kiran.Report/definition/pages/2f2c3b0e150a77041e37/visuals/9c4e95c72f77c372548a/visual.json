@@ -23,10 +23,14 @@
                     "textStyle": {
                       "fontSize": "40pt",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "color": "#333333"
 =======
                       "color": "#573b92"
 >>>>>>> parent of 68cde9e (color chnage)
+=======
+                      "color": "#0d6abf"
+>>>>>>> parent of 664631c (header color)
                     }
                   }
                 ]
