@@ -22,7 +22,11 @@
                     "value": "Cockpit",
                     "textStyle": {
                       "fontSize": "40pt",
+<<<<<<< HEAD
                       "color": "#333333"
+=======
+                      "color": "#573b92"
+>>>>>>> parent of 68cde9e (color chnage)
                     }
                   }
                 ]
